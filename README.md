@@ -20,7 +20,7 @@ Start with the `Artist`/`Song`/`Genre` domain.
 
 **The `Artist` model:**
 
-* An artist is initalized with a name and an empty `@songs` array. 
+* An artist is initialized with a name and an empty `@songs` array. 
 * The `Artist` class needs an instance method, `#add_song`, that takes in an argument of a song and adds that song to the artist's collection of songs. The `#add_song` method should also tell the song that it belongs to that artist. 
 * The `Artist` class needs an instance method, `#songs`, that returns the `@songs` array. 
 * The `Artist` class needs an instance method, `#genres` that iterates over that artist's songs and collects the genre of each song. 
@@ -32,8 +32,8 @@ Start with the `Artist`/`Song`/`Genre` domain.
 
 **The `Genre` model:**
 
-* A genre should be initilized with a name and an empty `@songs` array. 
-* The `Genre` class needs an instance method, `#add_song`, that takes in an argument of a song and adds that song to the genre's collcection of songs. Now you can use the `Genre#add_song` method in the `Song` class' initialize method to tell the genre that it owns the given song. 
+* A genre should be initialized with a name and an empty `@songs` array. 
+* The `Genre` class needs an instance method, `#add_song`, that takes in an argument of a song and adds that song to the genre's collection of songs. Now you can use the `Genre#add_song` method in the `Song` class' initialize method to tell the genre that it owns the given song. 
 * The `Genre` class needs an instance method, `#songs`, that returns the `@songs` array. 
 * The `Genre` class needs an instance method, `#artists`, that iterates over the genre's collection of songs and collects the artist that owns each song. 
 
@@ -48,7 +48,7 @@ Now let's move on to our `Doctor`/`Appointment`/`Patient` domain model.
 
 **The `Appointment` model:**
 
-* An appointment should be initialized with a date (as a string, like `"Monday, August 1st"`), and a doctor. The `#initialize` method should tell the new appointment that it belongs to the doctor passed in as an argument and tell the doctor that it now has this appointment in it's collection of appointments. Use the `Doctor#add_appointment` method here. 
+* An appointment should be initialized with a date (as a string, like `"Monday, August 1st"`), and a doctor. The `#initialize` method should tell the new appointment that it belongs to the doctor passed in as an argument and tell the doctor that it now has this appointment in its collection of appointments. Use the `Doctor#add_appointment` method here. 
 
 **The `Patient` model:**
 
