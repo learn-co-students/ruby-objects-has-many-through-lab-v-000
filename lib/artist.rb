@@ -15,9 +15,3 @@ class Artist
     songs.collect { |song| song.genre }
   end
 end
-
-
-
-
-
-
