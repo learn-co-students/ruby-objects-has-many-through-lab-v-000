@@ -35,7 +35,7 @@ describe "Doctor" do
   end
 
   describe "#patients" do 
-    it "has many patients, through patients" do
+    it "has many patients, through appointments" do
       martin.add_appointment(appointment)
       doctor_who.add_appointment(appointment)
       expect(doctor_who.patients).to include(martin)
