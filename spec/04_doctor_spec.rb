@@ -20,7 +20,7 @@ describe "Doctor" do
   end
 
   describe "#add_appointment" do 
-    it "adds a new appointment to the artist's @appointments array and tells that appointment that it belongs to the artist" do 
+    it "adds a new appointment to the doctor's @appointments array and tells that appointment that it belongs to the doctor" do 
       doctor_who.add_appointment(appointment)
       expect(doctor_who.instance_variable_get(:@appointments)).to include(appointment)
       expect(appointment.doctor).to eq(doctor_who)
