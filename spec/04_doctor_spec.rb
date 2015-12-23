@@ -1,9 +1,6 @@
 require "spec_helper"
 
 describe "Doctor" do 
-  let!(:martin) { Patient.new("Martin Jones") } 
-  let!(:doctor_who) { Doctor.new("The Doctor") }
-  let!(:appointment) { Appointment.new("Friday, January 32nd", doctor_who) }
 
   describe "#new" do 
     it "initializes with a name and an empty collection of appointments" do
@@ -15,13 +12,17 @@ describe "Doctor" do
 
   describe "#name" do 
     it "has a name" do 
+      doctor_who = Doctor.new("The Doctor")
       expect(doctor_who.name).to eq("The Doctor")
     end
   end
 
   describe "#add_appointment" do 
     it "adds a new appointment to the artist's @appointments array and tells that appointment that it belongs to the artist" do 
+      doctor_who = Doctor.new("The Doctor")
+      appointment = Appointment.new("Friday, January 32nd", doctor_who)
       doctor_who.add_appointment(appointment)
+
       expect(doctor_who.instance_variable_get(:@appointments)).to include(appointment)
       expect(appointment.doctor).to eq(doctor_who)
     end
@@ -29,14 +30,21 @@ describe "Doctor" do
 
   describe "#appointments" do 
     it "has many appointment" do
-      doctor_who.add_appointment(appointment) 
+      doctor_who = Doctor.new("The Doctor")
+      appointment = Appointment.new("Friday, January 32nd", doctor_who)
+      doctor_who.add_appointment(appointment)
+
       expect(doctor_who.appointments).to include(appointment)
     end
   end
 
   describe "#patients" do 
     it "has many patients, through patients" do
+      doctor_who = Doctor.new("The Doctor")
+      appointment = Appointment.new("Friday, January 32nd", doctor_who)
+      martin = Patient.new("Martin Jones")
       martin.add_appointment(appointment)
+      
       doctor_who.add_appointment(appointment)
       expect(doctor_who.patients).to include(martin)
     end
