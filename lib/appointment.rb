@@ -6,7 +6,7 @@ class Appointment
 		@doctor = doctor
 		@doctor.appointments << self
 	end
-	def patient(patient)
+	def patient=(patient)
 		@patient = patient
 		@patient.appointments << self
 	end
