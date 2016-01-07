@@ -18,7 +18,7 @@ describe "Doctor" do
   end
 
   describe "#add_appointment" do 
-    it "adds a new appointment to the artist's @appointments array and tells that appointment that it belongs to the artist" do 
+    it "adds a new appointment to the doctor's @appointments array and tells that appointment that it belongs to the doctor" do 
       doctor_who = Doctor.new("The Doctor")
       appointment = Appointment.new("Friday, January 32nd", doctor_who)
       doctor_who.add_appointment(appointment)
