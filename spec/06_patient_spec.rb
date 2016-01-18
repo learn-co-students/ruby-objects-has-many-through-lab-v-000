@@ -12,7 +12,7 @@ describe "Patient" do
   end
 
   describe "#add_appointment" do
-    it "takes in an argument of an apppointment and adds that appointment to it's list of appointments and tells that appointment it belongs to the patient" do 
+    it "takes in an argument of an appointment and adds that appointment to it's list of appointments and tells that appointment it belongs to the patient" do 
       martin.add_appointment(appointment)
       expect(martin.appointments).to include(appointment)
       expect(appointment.patient).to eq(martin)
