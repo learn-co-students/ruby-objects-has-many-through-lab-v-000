@@ -8,6 +8,8 @@ class Genre
 
   def add_song(song)
     @songs << song
+    #can also do:
+    #self.songs << song
     song.genre = self
   end
 
