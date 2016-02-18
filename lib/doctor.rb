@@ -1,5 +1,3 @@
-require 'pry'
-
 class Doctor
 
   attr_reader :name, :appointments #may need accessor for adding appts
