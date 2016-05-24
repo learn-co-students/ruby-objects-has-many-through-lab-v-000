@@ -1,0 +1,26 @@
+require 'pry'
+
+class Genre
+
+  attr_accessor :name, :songs, :artist
+
+  def initialize(name)
+    @name = name
+    @songs = []
+  end
+
+  def add_song(song)
+    @songs << song
+    song.genre = self
+  end
+
+  def songs
+    @songs
+  end
+
+  def artists
+    self.songs.collect {|song| song.artist}
+  end
+
+
+end
