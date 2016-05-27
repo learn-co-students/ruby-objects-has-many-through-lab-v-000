@@ -1,15 +1,11 @@
 class Appointment
 
-  attr_accessor :appointment, :doctor, :patient
+  attr_accessor :date, :doctor, :patient
 
-  def initialize(appointment, doctor)
-    @appointment = appointment
+  def initialize(date, doctor)
+    @date = date
     @doctor = doctor
     doctor.add_appointment(self)
-  end
-
-  def patient
-    patient.add_appointment(self)
   end
 
 end
