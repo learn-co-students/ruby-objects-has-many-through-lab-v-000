@@ -2,7 +2,7 @@ class Patient
   attr_reader :appointments
 
   def initialize(name)
-    @name = name
+    @name         = name
     @appointments = []
   end
 
@@ -12,9 +12,7 @@ class Patient
   end
 
   def doctors
-    appointments.map do |appointment|
-      appointment.doctor
-    end
+    appointments.map { |appointment| appointment.doctor }
   end
 
 end
