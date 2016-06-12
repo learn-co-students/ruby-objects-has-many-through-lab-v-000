@@ -9,14 +9,6 @@ class Appointment
   end
 
 
-  def patient
-
-  end
-
-  def doctor
-
-  end
-
 
 
 
