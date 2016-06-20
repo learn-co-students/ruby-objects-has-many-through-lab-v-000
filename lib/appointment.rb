@@ -1,22 +1,10 @@
 require 'pry'
 class Appointment
-  attr_accessor :doctor, :patient
-
-  def initialize(day, doctor)
-
-    @day = day
+  attr_accessor :patient, :doctor
+  def initialize(date, doctor)
+    @date = date
     @doctor = doctor
-
-  end
-
-  def appointments
-
-
-
-  end
-
-  def doctor
-
+    doctor.add_appointment(self)
   end
 
 
