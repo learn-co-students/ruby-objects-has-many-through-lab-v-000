@@ -10,9 +10,9 @@
 
 In this lab, we'll be dealing with two sets of three classes. 
 
-We have a `Song`, `Artist` and `Genre` class. Songs belong to an artist and belong to a genre. A genre has many songs and an artist has many songs. An artist has many genres through it's songs and a genre has many artists through it's songs. 
+We have a `Song`, `Artist` and `Genre` class. Songs belong to an artist and belong to a genre. A genre has many songs and an artist has many songs. An artist has many genres through its songs and a genre has many artists through its songs. 
 
-We also have an `Appointment`, `Doctor` and `Patient` class. Appointments belong to a patient and to a doctor. A doctor has many appointments and a patient has many appointments. A doctor has many patients through it's appointments and a patient has many doctor's through it's appointments. 
+We also have an `Appointment`, `Doctor` and `Patient` class. Appointments belong to a patient and to a doctor. A doctor has many appointments and a patient has many appointments. A doctor has many patients through its appointments and a patient has many doctor's through its appointments. 
 
 ## Instructions
 
@@ -57,4 +57,6 @@ Now let's move on to our `Doctor`/`Appointment`/`Patient` domain model.
 * The `Patient` class needs an instance method, `#appointments`, that returns the content of the `@appointments` array. 
 * The `Patient` class needs an instance method, `#doctors`, that iterates over that patient's appointments and collects the doctor that belongs to each appointment. 
 
-<a href='https://learn.co/lessons/ruby-objects-has-many-through-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-objects-has-many-through-lab' title='Ruby Object Relations: Has-Many-Through Lab'>Ruby Object Relations: Has-Many-Through Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ruby-objects-has-many-through-lab'>Has Many Objects Through Lab</a> on Learn.co and start learning to code for free.</p>
