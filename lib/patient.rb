@@ -7,10 +7,10 @@ class Patient
     @appointments = []
   end
 
-# patient has many appointments.
+  # patient has many appointments.
   def add_appointment(appointment)
-   @appointments << appointment
-     appointment.patient = self
+    @appointments << appointment
+    appointment.patient = self
   end
 
   def appointments
@@ -18,8 +18,8 @@ class Patient
   end
 
   def doctors
-    self.appointments.collect do |parts|
-      parts.doctor
+    self.appointments.collect do |appointment|
+      appointment.doctor
     end
   end
 end
