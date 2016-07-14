@@ -9,6 +9,7 @@ class Patient
   def add_appointment(appointment)
     # add song to Genre.songs
     @appointments << appointment
+    appointment.patient = self
   end
 
   def appointments
