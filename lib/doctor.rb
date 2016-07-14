@@ -12,7 +12,7 @@ class Doctor
   end
 
   def appointments
-    @songs
+    @appointments
   end
 
   def patients
