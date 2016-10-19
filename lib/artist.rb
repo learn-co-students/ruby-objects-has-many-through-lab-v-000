@@ -7,16 +7,18 @@ class Artist
     @songs = []
   end
 
+  def songs
+    @songs
+  end
+
   def add_song(song)
     @songs << song
     song.artist = self
-end
+  end
 
-def songs
-  @songs
-end
-
-def genres
-self.songs.collect {|song|song.genre}
-end
+  def genres
+    self.songs.collect do |song|
+      song.genre
+    end
+  end
 end
