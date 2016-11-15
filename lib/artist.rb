@@ -18,7 +18,6 @@ class Artist
 
   def genres
     binding.pry
-    song.genre = self unless song.genre == self
   end
 
 end
