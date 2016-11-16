@@ -1,6 +1,6 @@
 require 'pry'
 class Artist
-  attr_accessor :name
+  attr_accessor :name, :song
 
   def initialize(name)
     @name = name
@@ -13,11 +13,11 @@ class Artist
   end
 
   def songs
-    @songs.dup.freeze
+    @songs
   end
 
   def genres
-    binding.pry
+    self.songs.collect{|k| k.genre}
   end
 
 end

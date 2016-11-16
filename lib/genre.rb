@@ -1,7 +1,7 @@
 require 'pry'
 
 class Genre
-  attr_accessor :name, :songs
+  attr_accessor :name, :songs, :genre
 
    def initialize(name)
      @name = name
@@ -13,5 +13,8 @@ class Genre
      song.genre = self unless song.genre == self
    end
 
+   def artists
+    self.songs.collect{|k| k.artist}
+   end
 
 end
