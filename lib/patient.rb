@@ -10,6 +10,7 @@ end# of initialize
 
 def add_appointment(appointment)
 @appointments << appointment
+appointment.patient = self 
 end# of add_appointment
 
 
