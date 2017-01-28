@@ -12,4 +12,8 @@ attr_reader :name, :songs
     @songs << song
   end
 
+  def genres
+    @songs.collect {|song| song.genre}
+  end
+
 end
