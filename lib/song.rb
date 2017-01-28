@@ -5,9 +5,11 @@ class Song
 
   def initialize(name, genre)
     @name = name
-    @genre = genre
+    @genre = Genre.find_or_create_by_name(genre)
   end
 
-
+  def artist(name)
+    @artist = Artist.find_or_create_by_name(name)
+  end
 
 end
