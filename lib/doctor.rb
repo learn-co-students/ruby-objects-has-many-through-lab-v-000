@@ -1,4 +1,5 @@
 class Doctor
+
   attr_accessor :name
 
   def initialize(name)
@@ -18,4 +19,5 @@ class Doctor
   def patients
     self.appointments.collect {|appointment| appointment.patient}
   end
+
 end
