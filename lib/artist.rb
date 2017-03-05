@@ -7,7 +7,7 @@ class Artist
   end
 
   def add_song(song)
-    @songs << song #try self; pretty sure it should fail (it did).
+    @songs << song
     song.artist = self
   end
 
@@ -16,9 +16,7 @@ class Artist
   end
 
   def genres #has many genres through songs. this is the same as:
-    @songs.collect do |song|                                     #genarr=[]
-      song.genre                                                 #self.songs.each do |songs|
-    end                                                             #genarr << songs.genre
-  end                                                             #return genarr
-                                                                  #end
-end
+    @songs.collect {|song| song.genre}                            #genarr=[]
+  end                                                             #self.songs.each do |songs|
+                                                                    #genarr << songs.genre
+end                                                               #return genarr; end

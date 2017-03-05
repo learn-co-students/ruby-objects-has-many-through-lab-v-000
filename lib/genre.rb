@@ -12,12 +12,11 @@ attr_reader :name #try changing this back to just a reader not attr_accessor
   end
 
   def artists
-    self.songs.collect do |song|
-      song.artist
-    end
+    self.songs.collect {|song| song.artist}
   end
 
   def songs
     @songs
   end
+
 end
