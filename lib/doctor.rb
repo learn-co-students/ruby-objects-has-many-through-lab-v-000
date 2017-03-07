@@ -18,7 +18,4 @@ class Doctor
     self.appointments.map {|appointment| appointment.patient}
   end
 
-  #class methods
-
-
 end

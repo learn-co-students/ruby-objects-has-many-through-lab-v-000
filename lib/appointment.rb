@@ -9,8 +9,4 @@ class Appointment
     doctor.appointments << self
   end
 
-  #instance methods
-
-
-  #class methods
 end
