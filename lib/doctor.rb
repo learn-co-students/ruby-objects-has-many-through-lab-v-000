@@ -1,10 +1,19 @@
+require 'pry'
 class Doctor
-attr_accessor :name
-  def initialize(name)
-    @name = name
-    @appointments = []
-  end
-  def add_appointment(date)
-     @appointments << Appointment.new(date,self)
+   attr_accessor :name
+   def initialize(name)
+     @name = name
+     @appointments = []
+   end
+   def add_appointment(date)
+     @appointments << appointment
+     date.doctor = self
+   end
+
+   def appointments
+     @appointments
+   end
+   def patients
+    @appointments.collect{|x| x.patient}
   end
 end
