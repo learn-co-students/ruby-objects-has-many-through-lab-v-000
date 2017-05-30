@@ -1,6 +1,6 @@
 class Patient
 
-  attr_accessor :name
+  attr_accessor :name, :appointments
 
   def initialize(name)
     @name = name
@@ -12,9 +12,6 @@ class Patient
     appointment.patient = self
 end
 
-  def appointments
-    @appointments
-  end
 
   def doctors
     @appointments.collect do |appointment|
