@@ -1,10 +1,10 @@
 require 'pry'
 class Doctor
   attr_accessor :name
+  #initializes with a name and an empty collection of appointments
   def initialize(name)
     @name = name
     @appointments = []
-    @patient = []
   end
 
   def add_appointment(appointment)
