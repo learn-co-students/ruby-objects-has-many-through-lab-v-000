@@ -17,7 +17,7 @@ class Doctor
 
   def patients
     self.appointments.collect do |appointment|
-      name.add_appointment(appointment)
+      appointment.patient
     end
   end
 
