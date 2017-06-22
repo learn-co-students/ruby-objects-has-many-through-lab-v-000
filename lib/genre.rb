@@ -8,7 +8,7 @@ class Genre
 
 
   def add_song(song)
-    binding.pry
+  #  binding.pry
     @songs << song
     song.genre = self
   end
@@ -16,4 +16,13 @@ class Genre
   def songs
     @songs
   end
+
+  def artists
+    self.songs.collect {|song| #iterate over songs[] and collect artist
+      song.artist
+    }
+
+  end
+
+
 end

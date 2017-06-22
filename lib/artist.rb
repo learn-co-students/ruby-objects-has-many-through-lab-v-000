@@ -16,7 +16,7 @@ attr_accessor :name
   end
 
   def genres
-    self.songs.collect {|song|
+    self.songs.collect {|song| #iterate over artist songs and collect genre of each song
       song.genre
     }
   end
