@@ -10,14 +10,11 @@ class Patient
 	 def add_appointment(appt_obj)
 		@appts << appt_obj
 		appt_obj.patient = self
+		self.appointments = appt_obj
 # binding.pry
 	 end
 	 
 	 def doctors
 		@appts.map { |a| a.doctor  }
-	 end
-	 
-	 def appointments
-		@appts
 	 end
 end
