@@ -15,7 +15,7 @@
      @songs
    end
   
-   def genres(genres)
+   def genres
     self.songs.collect {|song| song.genre}
    end
  end
