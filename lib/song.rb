@@ -3,6 +3,10 @@ class Song
 
   def initialize(name,genre)
     @name = name
-    @genre - genre
+    @genre = genre
+    genre.add_song(self) unless genre.songs.include?(self)
   end
+
+  
+
 end

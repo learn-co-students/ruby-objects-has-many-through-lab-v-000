@@ -1,5 +1,5 @@
 class Genre
-  attr_accessor :name
+  attr_accessor :name, :genre
 
   def initialize(name)
     @name = name
@@ -7,15 +7,15 @@ class Genre
   end
 
   def add_song(song)
-    self.songs << song
-    song.genre = self
+    @songs << song
+    song.genre = self unless song.genre == self
   end
 
   def songs
-    self.songs
+    @songs
   end
 
-  def artist
-    self.songs.collect{|s| s.artist }
+  def artists
+    @songs.collect{|s| s.artist}
   end
 end
