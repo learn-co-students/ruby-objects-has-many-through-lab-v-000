@@ -2,7 +2,7 @@ require 'pry'
 
 class Doctor
 
-  attr_accessor :name, :patients, :appointments
+  attr_accessor :name, :patients, :appointment, :doctor, :appointments
 
   def initialize(name)
     @name = name
@@ -10,13 +10,17 @@ class Doctor
   end
 
   def add_appointment(appointment)
-    @appointments << appointment
+    @appointments << appointment 
+    appointment.doctor = self
+  end
+
+  def appointments
+    @appointments
   end
 
   def patients
-    @appointments.collect do |time|
-      time.patient
-      binding.pry
+    @appointments.collect do |appointment|
+      appointment.patient
     end
   end
 end
