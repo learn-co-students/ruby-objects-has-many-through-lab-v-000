@@ -20,6 +20,4 @@ class Artist
       song.genre
     end
   end
-
-
 end
