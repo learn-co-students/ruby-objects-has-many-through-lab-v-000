@@ -5,11 +5,13 @@ class Artist
     self.songs = []
     self.name = name
 
+
   end
 
   def add_song(song)
     self.songs << song
     song.artist = self
+    song.genre.artists << self
   end
 
   def genres
