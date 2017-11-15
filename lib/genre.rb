@@ -6,19 +6,17 @@ class Genre
         @name = name
         @songs = []
     end
+   
 
-    def songs
-        @songs
+    def add_song(song)
+        @songs << song
+        song.genre = self
     end
-
-    def artists(song)
-        Artist.songs.collect do |song|
+    
+    def artists
+        self.songs.collect do |song|
             song.artist
         end
     end
-
-
-
-
 
 end

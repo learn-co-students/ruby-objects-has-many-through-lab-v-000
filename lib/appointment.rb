@@ -1,0 +1,17 @@
+class Appointment
+
+    attr_accessor :date, :doctor, :patient
+
+    def initialize(date, doctor)
+        @date = date
+        @doctor = doctor
+        patient.add_appointment(self)
+    end
+
+    def doctor
+        appointment.doctor = self
+    end
+    #Do we need to do anything to associate the doctor and appointment?
+
+end
+    
