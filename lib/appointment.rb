@@ -8,10 +8,7 @@ class Appointment
         doctor.add_appointment(self)
     end
 
-    def doctor
-        appointment.doctor = self
-    end
-    #Do we need to do anything to associate the doctor and appointment?
+     #Do we need to do anything to associate the doctor and appointment?
 
 end
     
