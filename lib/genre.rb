@@ -1,4 +1,3 @@
-require 'pry'
 class Genre
   attr_accessor :name
   attr_reader :songs
@@ -16,5 +15,4 @@ class Genre
   def artists
     self.songs.map {|song| song.artist}
   end
-
 end
