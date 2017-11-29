@@ -1,6 +1,7 @@
+require 'pry'
 class Doctor
 
-  attr_accessor :name
+  attr_accessor :name, :patient
 
   def initialize(name)
     @name = name
@@ -10,9 +11,8 @@ class Doctor
 
   def add_appointment(appointment)
     raise AssociationTypeMismatchError, "Appointment class is expected" if !appointment.is_a?(Appointment)
-    @appointments << appointment unless self.appointments.include?(appointment)
+    @appointments << appointment unless @appointments.include?(appointment)
     appointment.doctor = self
-    appointment.patient.doctor = self
   end
 
   def appointments
@@ -20,7 +20,7 @@ class Doctor
   end
 
   def patients
-    @appointments.each {|appointment| @patients << appointment.patient}
+    @appointments.each {|appointment| @patients << appointment.patient unless @patients.include?(appointment.patient)}
     @patients
   end
 
