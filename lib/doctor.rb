@@ -1,7 +1,7 @@
 require 'pry'
 class Doctor
-attr_reader :name
-attr_accessor :appointments
+  attr_reader :name
+  attr_accessor :appointments
 
   def initialize(name)
     @name = name
@@ -9,17 +9,11 @@ attr_accessor :appointments
   end
 
   def add_appointment(appointment)
-    @appointments << appointment
+    self.appointments << appointment
     appointment.doctor = self
   end
 
-  def appointments
-    @appointments
-  end
-
   def patients
-    self.appointments.collect do | appointment |
-      appointment.patient
-    end
+    self.appointments.collect { | appointment | appointment.patient }
   end
 end
