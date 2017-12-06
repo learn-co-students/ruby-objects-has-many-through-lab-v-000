@@ -19,7 +19,8 @@ describe "Artist" do
     end
   end
 
-  describe "#add_song" do 
+  describe "#add_song" do
+  
     it "adds a new song to the artist's @songs array and tells that song that it belongs to the artist" do 
       jay_z = Artist.new("Jay-Z")
       rap = Genre.new("rap")
