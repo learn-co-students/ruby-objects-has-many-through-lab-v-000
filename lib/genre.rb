@@ -1,7 +1,7 @@
 require 'pry'
 
 # create Genre class 
-
+class Genre
 # create initialize method w/(name) argument
   # - initialize with empty collection of songs
 
@@ -13,3 +13,5 @@ require 'pry'
 
 # create artists method - no arguments 
   # - this method will show the connection between songs and artists 
+  
+end 
