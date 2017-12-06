@@ -2,10 +2,12 @@ require 'pry'
 
 # create an Artist class 
   class Artist
-# create initialize method w/name argument 
+    # create attr_accessor to access songs array
+    attr_accessor :songs
+    # create initialize method w/name argument 
     def initialize(name)
   # - initialize with empty array of songs
-      
+      @songs = []
     end 
 # create name method - no arguments 
 
