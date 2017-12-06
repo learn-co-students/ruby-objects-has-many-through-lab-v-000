@@ -3,16 +3,15 @@ require 'pry'
 # create an Artist class 
   class Artist
     # create attr_accessor to access songs array
-    attr_accessor :songs
+    attr_accessor :songs, :name
     # create initialize method w/name argument 
     def initialize(name)
   # - initialize with empty array of songs
+      @name = name
       @songs = []
     end 
 # create name method - no arguments 
-    def name
-      
-    end 
+    # - shown above in attr_accessor list 
 # create add_song method - no arguments 
   # - this method will add a new song instance to the @songs array
   # - this method will tell the song instance that it belongs to the artist instance 
