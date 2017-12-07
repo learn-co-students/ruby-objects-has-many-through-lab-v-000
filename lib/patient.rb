@@ -20,7 +20,10 @@ class Patient
   def doctors 
     # how are doctors and appts connected? 
     # they are connected through the @appts array 
-    binding.pry
+  
+    appointments.collect do |a|
+      a.doctor
+    end
   end 
   
   
