@@ -29,7 +29,9 @@ class Doctor
   def patients 
   # - this method will show the relationship between patients and appointments 
     # how are patients shown? through the appointments array
-    binding.pry
+    self.appointments.collect do |a|
+      a.patient
+    end 
   end 
 end 
 
