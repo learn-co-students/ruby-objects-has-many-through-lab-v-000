@@ -26,7 +26,11 @@ class Doctor
   end 
 
 # create patients method 
+  def patients 
   # - this method will show the relationship between patients and appointments 
+    # how are patients shown? through the appointments array
+    binding.pry
+  end 
 end 
 
 
