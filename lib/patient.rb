@@ -7,10 +7,12 @@ class Patient
 # intialize with name 
   def initialize(name)
     @name = name
+    @appointments = []
+    # add appointments array to store appointments 
   end 
 # create add_appointment method 
   def add_appointment(appointment)
-    
+    @appointments << appointment
   end 
 # create doctors method 
   
