@@ -3,7 +3,7 @@ require 'pry'
 # create an Artist class 
   class Artist
     # create attr_accessor to access songs array
-    attr_accessor :songs, :name
+    attr_accessor :name
     # create initialize method w/name argument 
     def initialize(name)
   # - initialize with empty array of songs
@@ -23,9 +23,12 @@ require 'pry'
       # song_instance.song_instance - belongs to  
     end 
 # create songs method - no arguments 
+    def songs
   # - displays what songs are included in the songs array
+      @songs
+    end 
+    # create genres method - no arguments 
     def genres 
-# create genres method - no arguments 
       self.songs.collect do |f|
         f.genre
       end

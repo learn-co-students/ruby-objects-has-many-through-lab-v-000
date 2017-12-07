@@ -8,6 +8,7 @@ class Song
   def initialize(name, genre) 
     @name = name
     @genre = genre
+    genre.add_song(self)
   end 
 # create genre method - no arguments 
   # - this method will display the genre type 
