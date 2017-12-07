@@ -2,8 +2,13 @@ require 'pry'
 
 # create Doctor class
 class Doctor 
+# create attr_accessor for name to set name 
+  attr_accessor :name 
 # initialize method w/name and @appointments array = []
-
+  def initialize(name)
+    @name = name
+    @appointments = [] # when will you be adding appointments to this array? 
+  end 
 # create name method - may be able to use attr_accessor 
 
 # create add_appointment method 
