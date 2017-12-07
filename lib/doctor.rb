@@ -3,7 +3,7 @@ require 'pry'
 # create Doctor class
 class Doctor 
 # create attr_accessor for name to set name 
-  attr_accessor :name 
+  attr_accessor :name, :patients, :appointments 
 # initialize method w/name and @appointments array = []
   def initialize(name)
     @name = name
@@ -13,7 +13,8 @@ class Doctor
   
 # create add_appointment method w/(appointment) argument
   def add_appointment(appointment)
-  # - this method will show th appointment belongs to the doctor 
+  # - this method will show the appointment belongs to the doctor 
+    @appointments << appointment
   # - this is shown by giving a Doctor instance an appointment attr_accessor. Then we set that appointment attribute to an instance of the Doctor  class.
     
   end 
