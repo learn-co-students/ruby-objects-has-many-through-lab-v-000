@@ -19,8 +19,7 @@ class Patient
 # create doctors method 
   def doctors 
     # how are doctors and appts connected? 
-    # they are connected through the @appts array 
-  
+    # they are connected through the @appts array
     appointments.collect do |a|
       a.doctor
     end

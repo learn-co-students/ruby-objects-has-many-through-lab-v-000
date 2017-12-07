@@ -15,12 +15,37 @@ class Doctor
   def add_appointment(appointment)
   # - this method will show the appointment belongs to the doctor 
     @appointments << appointment
+    # how are appointments and doctors connected? through the @appointments array
+    appointment.doctor = self
   # - this is shown by giving a Doctor instance an appointment attr_accessor. Then we set that appointment attribute to an instance of the Doctor  class.
-    
   end 
 
 # create appointments method - this should display the contents of the appointments array 
+  def appointments 
+    @appointments
+  end 
 
 # create patients method 
   # - this method will show the relationship between patients and appointments 
 end 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
