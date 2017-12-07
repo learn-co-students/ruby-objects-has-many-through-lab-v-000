@@ -13,7 +13,10 @@ class Genre
   end 
 # create name method - no argument - this is above using attr_accessor :name
   # - this method will display the name 
-
+# add the method add_songs(song) to connect songs to genre
+  def add_songs(song)
+    @songs << song
+  end 
 # create songs method - no arguments
   def songs
   # - this method will display the songs array contents 

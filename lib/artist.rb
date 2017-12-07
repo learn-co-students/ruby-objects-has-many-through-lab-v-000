@@ -16,20 +16,22 @@ require 'pry'
     
     def add_song(song)
   # - this method will add a new song instance to the @songs array
-    binding.pry
       @songs << song
+      song.artist = self
 #  # - this method will tell the song instance that it belongs to the artist instance
       # figure out what self is
-      # song_instance.song_instance - belongs to
-      
+      # song_instance.song_instance - belongs to  
     end 
 # create songs method - no arguments 
   # - displays what songs are included in the songs array
-
+    def genres 
 # create genres method - no arguments 
+      self.songs.collect do |f|
+        f.genre
+      end
   # - shows relationship between genres and songs
   # - should be able to say 
-    
+    end 
     
     
     
