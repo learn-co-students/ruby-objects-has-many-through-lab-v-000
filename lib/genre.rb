@@ -21,10 +21,14 @@ class Genre
     @songs
   end 
   
-  def add_songs(song)
+  def add_song(song)
     @songs << song
   end 
     # create artists method - no arguments 
+  def artists
   # - this method will show the connection between songs and artists 
-  
+    self.songs.collect do |f| 
+      f.artist
+  end
+  end 
 end 
