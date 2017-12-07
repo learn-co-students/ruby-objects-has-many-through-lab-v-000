@@ -8,18 +8,17 @@ class Appointment
   def initialize(date, doctor)
     @date = date
     @doctor = doctor
-    @appointments = []
-  end 
-# create patient method 
-  def patient
-  # - this method will show the relationship between  patient and appointment 
-    # where are appointments and patients connected? in the @appointment array
-    binding.pry
-  # - we do this by setting the instance = attr_accessor 
+    doctor.add_appointment(self)
   end 
 
+# create patient method 
+  
+  # - this method will show the relationship between  patient and appointment 
+    # where are appointments and patients connected? in the @appointment array
 # create doctor method 
-  # - this method will show the relationship between doctor and appointment 
+ 
+    # - this method will show the relationship between doctor and appointment 
+ 
 
   
   

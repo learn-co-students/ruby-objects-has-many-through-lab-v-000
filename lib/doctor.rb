@@ -3,7 +3,7 @@ require 'pry'
 # create Doctor class
 class Doctor 
 # create attr_accessor for name to set name 
-  attr_accessor :name, :patients, :appointments 
+  attr_accessor :name, :appointments 
 # initialize method w/name and @appointments array = []
   def initialize(name)
     @name = name
