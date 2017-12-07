@@ -1,7 +1,7 @@
 require 'pry' 
 
 # create Doctor class
-
+class Doctor 
 # initialize method w/name and @appointments array = []
 
 # create name method - may be able to use attr_accessor 
@@ -14,4 +14,4 @@ require 'pry'
 
 # create patients method 
   # - this method will show the relationship between patients and appointments 
-
+end 
