@@ -1,11 +1,6 @@
 class Doctor
-#==========================================
-  # INSTANCE ATTRIBUTES
-#==========================================
 attr_accessor :name, :appointments
-#==========================================  
-  # INSTANCE
-#==========================================
+
   def initialize(name)
     self.name = name
     self.appointments = []
@@ -19,5 +14,5 @@ attr_accessor :name, :appointments
   def patients
     self.appointments.map{|appt|appt.patient}
   end
-#========================================== 
+
 end

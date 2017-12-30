@@ -1,11 +1,6 @@
 class Artist
-#==========================================
-  # INSTANCE ATTRIBUTES
-#==========================================
 attr_accessor :name, :songs
-#==========================================  
-  # INSTANCE
-#==========================================
+
   def initialize(name)
     self.name = name
     self.songs = []
@@ -20,5 +15,5 @@ attr_accessor :name, :songs
   def genres
     self.songs.map{|song| song.genre}
   end
-#========================================== 
+ 
 end
