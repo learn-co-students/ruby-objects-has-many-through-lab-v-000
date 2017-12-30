@@ -5,6 +5,7 @@ attr_accessor :name, :appointments
     self.name = name
     self.appointments = []
   end
+  
   def add_appointment(appt)
     self.appointments << appt
     appt.patient = self
