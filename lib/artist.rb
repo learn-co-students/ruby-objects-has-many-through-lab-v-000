@@ -9,6 +9,15 @@ class Artist
 
   def add_song(song)
     @songs << song
+    song.artist = self
+  end
+
+  def genres
+    genres_arr = []
+    @songs.each do |song|
+      genres_arr << song.genre
+    end
+    genres_arr
   end
 
 end

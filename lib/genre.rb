@@ -7,4 +7,12 @@ class Genre
     @songs = []
   end
 
+  def artists
+    artists_arr = []
+    @songs.each do |song|
+      artists_arr << song.artist
+    end
+    artists_arr
+  end
+
 end
