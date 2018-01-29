@@ -8,11 +8,7 @@ class Genre
   end
 
   def artists
-    artists_arr = []
-    @songs.each do |song|
-      artists_arr << song.artist
-    end
-    artists_arr
+    @songs.collect {|song| song.artist}
   end
 
 end
