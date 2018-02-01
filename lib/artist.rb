@@ -23,3 +23,4 @@ class Artist
     end
 
 end
+#testing cloned repo to windows 10
