@@ -9,6 +9,14 @@ class Artist
   
   def add_song(song)
     @songs << song
+    song.artist = self
+  end 
+  
+  def genres 
+   #binding.pry
+    @songs.collect do |song|
+      song.genre 
+    end 
   end 
   
   
