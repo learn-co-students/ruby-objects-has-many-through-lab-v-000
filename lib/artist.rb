@@ -1,5 +1,4 @@
 class Artist
-
   attr_accessor :name
 
   def initialize(name)
@@ -17,7 +16,10 @@ class Artist
   end
 
   def genres
-    self.songs.collect {|song| song.genre}
+    songs.collect do |song|
+      song.genre
+    end
   end
+
 
 end
