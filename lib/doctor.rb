@@ -16,8 +16,9 @@ class Doctor
   end
 
   def patients
+    # it should return an array of all the patients of this Dr.
     self.appointments.collect do |appointment|
-      patient.appointments
+      appointment.patient
     end
   end
 end
