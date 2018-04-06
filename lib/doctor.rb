@@ -9,4 +9,13 @@ class Doctor
 
   end
 
+  def add_appointment(appointment)
+    @appointments << appointment
+    appointment.doctor = self
+  end
+
+  def patients
+    @appointments.collect { |appt| appt.patient }.uniq
+  end
+
 end
