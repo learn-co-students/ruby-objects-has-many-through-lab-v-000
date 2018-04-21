@@ -1,12 +1,14 @@
 require 'pry'
 
-class Appointments
-  attr_accessor :doctor_who, :date, :patient
+class Appointment
+  attr_accessor :date, :doctor, :patient
 
-  def initialize(date, doctor_who)
+
+  def initialize(date, doctor)
     @date = date
-    @doctor_who = doctor_who
-    doctor_who.add_appointment(self)
+    @doctor = doctor
+    doctor.add_appointment(self)
   end
+
 
 end
