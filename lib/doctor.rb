@@ -7,13 +7,15 @@ def initialize(name)
   @appointments = []
 end
 
-def add_appointment
-end
-
-def appointments
+def add_appointment(appointment)
+  @appointments << appointment
+  appointment.doctor = self
 end
 
 def patients
+    self.appointments.collect do |appointment|
+      appointment.patient
+    end
 end
 
 end
