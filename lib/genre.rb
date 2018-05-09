@@ -1,3 +1,5 @@
+
+
 class Genre
   attr_accessor :name
 
@@ -6,7 +8,7 @@ class Genre
     @songs = []
   end
 
-  def adds_song(song)
+  def add_song(song)
     @songs << song
   end
 
@@ -14,11 +16,9 @@ class Genre
     @songs
   end
 
-  def artists
-    @songs.collect do |song|
-      song.artist
-    end
-  end
 
+  def artists
+    self.songs.map { |s| s.artist}
+  end
 
 end
