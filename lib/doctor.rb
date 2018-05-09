@@ -9,7 +9,7 @@ class Doctor
   end
 
   def add_appointment(appointment)
-    @appointments << appointment
+    self.appointments << appointment
   end
 
   def appointments
@@ -17,6 +17,6 @@ class Doctor
   end
 
   def patients
-    @appointments.map {|i| i.patient}
+    self.appointments.map {|i| i.patient}
   end
 end
