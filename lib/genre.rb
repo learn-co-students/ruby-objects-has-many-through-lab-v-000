@@ -1,6 +1,6 @@
 
 class Genre
-attr_accessor :name, :songs
+  attr_accessor :name, :songs
 
   def initialize(genre)
     @name = genre
@@ -11,5 +11,5 @@ attr_accessor :name, :songs
     @songs.collect do |song|
       song.artist
     end
-  end  
+  end
 end

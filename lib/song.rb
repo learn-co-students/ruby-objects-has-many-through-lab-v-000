@@ -7,5 +7,4 @@ class Song
     @genre = genre
     genre.songs << self
   end
-
 end
