@@ -1,5 +1,5 @@
 class Patient
-  attr_accessor :name, :genre
+  attr_accessor :doctor, :date, :name
 
   @@all = []
 
@@ -8,8 +8,8 @@ class Patient
     @@all << self
   end
 
-  def new_song(name, genre)
-
+  def new_appointment(doctor, date)
+    Appointment.new(self, doctor, date)
   end
 
   def self.all

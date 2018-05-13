@@ -13,10 +13,6 @@ class Artist
     @@all
   end
 
-  def new_song(genre, song)
-    Song.new(genre, song, self)
-  end
-
   def songs
     Song.all.select do |song|
       song.artist == self
@@ -30,9 +26,13 @@ class Artist
   end
 
   def genres
-    Song.all.select do |song|
-      song.genre == self
+    songs.map do |song|
+      song
     end
+  end
+
+  def new_song(genre, song)
+    Song.new(genre, song, self)
   end
 
 end
