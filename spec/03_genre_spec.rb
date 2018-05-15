@@ -14,6 +14,7 @@ describe "Genre" do
       jay_z = Artist.new("Jay-Z")
       rap = Genre.new("rap")
       Song.new("99 Problems", jay_z, rap)
+      #this is happening in song.new
       shrimp = Song.new("Big Shrimpin", jay_z, rap)
 
       expect(rap.songs).to include(shrimp)
@@ -26,6 +27,8 @@ describe "Genre" do
       kendrick = Artist.new("Kendrick Lamar")
       rap = Genre.new("rap")
       ninenty_nine_problems = Song.new("99 Problems", jay_z, rap)
+      #its happening in the Song class, because the only thing
+      #attribute that artist has is name
       humble = Song.new("HUMBLE", kendrick, rap)
 
 
