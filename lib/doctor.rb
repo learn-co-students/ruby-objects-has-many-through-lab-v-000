@@ -17,5 +17,10 @@ class Doctor
       appointment.self 
     end
   end 
-  def patients 
+  def patients
+    @@all.select do |patient|
+      patient.self
+    end 
+  end 
+    
 end 
