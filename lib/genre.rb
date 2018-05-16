@@ -13,13 +13,13 @@ class Genre
     song.genre = self
   end 
   def songs 
-    @@all.select do |song|
+    Song.all.select do |song|
     song.genre == self
     end 
   end
   def artists
-    @@all.select do |song|
-      genre.artist
+    Song.all.collect do |song|
+      song.artist
     end 
   end 
 

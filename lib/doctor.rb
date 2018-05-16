@@ -8,18 +8,17 @@ class Doctor
   def self.all
     @@all
   end 
-  def new_appointment(date,patient)
-    new_appointment = Appointment.new(date,patient)
-    new_appointment.doctor = self
+  def new_appointment(patient,date)
+    new_app = Appointment.new(date,patient,self)
   end 
   def appointments 
-    @@all.select do |appointment|
-      appointment.self 
+    Appointment.all.select do |appointment|
+      appointment.doctor == self
     end
   end 
   def patients
-    @@all.select do |patient|
-      patient.self
+    appointments.collect do |appointment|
+      appointment.patient
     end 
   end 
     
