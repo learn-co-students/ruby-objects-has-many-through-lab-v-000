@@ -44,3 +44,6 @@ end
 
 #appointments is the join model between the patients and doctors
 #ex; appointments lists the associations between doctors and patients
+
+#there will will be a slow change from the syntax and mindset of part 1 to part 2
+#as more languages are learned

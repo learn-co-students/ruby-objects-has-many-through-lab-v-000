@@ -1,6 +1,7 @@
 require "pry"
 #this lab was given two different ways to answers in the two parts by two different
 #tech coaches. Benjamin Aschenbrenner(part 1) Matt Cassara (part 2)
+#Kevin Webster agrees with Matt (part 2 - 2)
 
 class Doctor
   @@all = []
