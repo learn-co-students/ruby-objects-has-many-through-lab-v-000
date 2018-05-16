@@ -1,6 +1,6 @@
 require "pry"
 class Appointment
-  @@all = []
+  @@all = [] #how to find Appointment appointment.all.find
   def initialize(date,doctor,patient)
     @patient = patient
     @doctor = doctor
