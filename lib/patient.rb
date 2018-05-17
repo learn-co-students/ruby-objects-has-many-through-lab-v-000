@@ -12,13 +12,13 @@ class Patient
     new_appointment = Appointment.new(date,self,doctor)
   end 
   def appointments 
-    @@all.select do |array|
-      array.self
+    Appointment.all.select do |appointment|
+      appointment.patient == self
     end 
   end 
   def doctors 
-    @@all.select do |array|
-      array.doctor
+    appointments.collect  do |appointment|
+      appointment.doctor
     end 
   end 
 end 
