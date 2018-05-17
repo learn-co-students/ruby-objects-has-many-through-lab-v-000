@@ -1,3 +1,6 @@
+# patient has many appointments and doctors.
+# patient has many (<<) doctors through appointments
+
 class Patient
 
   attr_accessor :name, :appointments, :doctors
