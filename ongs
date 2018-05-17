@@ -1,0 +1,40 @@
+=> [[32m#<Song:0x000000033b6250[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x000000033b6430[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31mNinety Nine Problems[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x00000002926a88[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x00000002926b00[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31mNinety Nine Problems[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x0000000295dfb0[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x0000000295e0a0[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31mNinety Nine Problems[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x000000026a5930[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x000000028b5130[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31mLucifer[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x000000026877c8[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x00000002687818[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31m99 Problems[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x00000002687778[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x00000002687818[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31mBig Shrimpin[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x0000000267d638[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x0000000267d700[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31m99 Problems[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x000000025fd488[0m
+  @artist[32m=[0m[32m#<Artist:0x000000025fd848[0m @name[32m=[0m[31m[1;31m"[0m[31mJay-Z[1;31m"[0m[31m[0m[32m>[0m,
+  @genre[32m=[0m[32m#<Genre:0x000000025fd780[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31m99 Problems[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x000000025cb820[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x000000025cbb18[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31m99 Problems[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Song:0x000000025cb780[0m
+  @artist[32m=[0m[1;36mnil[0m,
+  @genre[32m=[0m[32m#<Genre:0x000000025cbb18[0m @name[32m=[0m[31m[1;31m"[0m[31mrap[1;31m"[0m[31m[0m[32m>[0m,
+  @name[32m=[0m[31m[1;31m"[0m[31mBig Shrimpin[1;31m"[0m[31m[0m[32m>[0m]
