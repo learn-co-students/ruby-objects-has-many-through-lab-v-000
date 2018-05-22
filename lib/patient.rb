@@ -1,25 +1,18 @@
 class Patient
-  
-  attr_accessor :name
+  attr_accessor :name, :appointments
 
   def initialize(name)
-    @name = name 
-    @appointments =[]
-  end
-
-  def appointments
-    @appointments 
+    self.name = name
+    self.appointments = []
   end
 
   def add_appointment(appt)
-    @appointments << appt
+    self.appointments << appt
     appt.patient = self
   end
 
   def doctors
-    self.appointments.collect do |a|
-      a.doctor
-    end
+    self.appointments.collect {|x| x.doctor}
   end
 
 end
