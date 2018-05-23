@@ -1,5 +1,3 @@
-require 'pry'
-
 class Patient
 
   attr_accessor :name
@@ -15,8 +13,8 @@ class Patient
     @@all
   end
 
-  def new_appointment(date, doctor)
-    Appointment.new(date, self, doctor)
+  def new_appointment(doctor, date)
+    Appointment.new(self, doctor, date)
   end
 
   def appointments
@@ -26,16 +24,9 @@ class Patient
   end
 
   def doctors
-  @appointments.collect do |appt|
-    appt.doctor
+    self.appointments.collect do |appt|
+      appt.doctor
+    end
   end
-end
-
-  # def doctors
-  #   self.appointments.collect do |appt|
-  #     # binding.pry
-  #     appt.
-  #   end
-  # end
 
 end
