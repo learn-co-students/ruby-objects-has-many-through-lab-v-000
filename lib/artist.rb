@@ -10,6 +10,7 @@ def initialize(name)
   @name = name
   @@all << self
   @songs = []
+  @genres = []
 end
 
 def self.all
@@ -17,12 +18,18 @@ def self.all
 end
 
 def new_song(name, genre)
-Song.new(name, self.name, genre.name)
-@songs << self
+song = Song.new(name, self, genre)
+@songs << song
+@genres << genre
+song
 end
 
 def songs
   @songs
+end
+
+def genres
+@genres
 end
 
 end
