@@ -31,7 +31,7 @@ describe "Doctor" do
     it "has many appointments" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")
-      doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
+      doctor_who.new_appointment(hevydevy, "Friday, January 32nd")    #the instructions say date, then patient; need to change code or test
       appointment = doctor_who.new_appointment(hevydevy, "Saturday, January 33rd")
       doctor_who.new_appointment(hevydevy, "Rootenskadootenday, January 315th")
       expect(doctor_who.appointments).to include(appointment)
