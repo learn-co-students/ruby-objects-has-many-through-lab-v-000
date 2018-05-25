@@ -1,7 +1,7 @@
 require 'pry'
 
 class Doctor
-  attr_accessor :name, :patient
+  attr_accessor :name
   @@all = []
   
   def self.all
@@ -13,7 +13,7 @@ class Doctor
     @@all << self
   end
   
-  def new_appointment(date, patient)
+  def new_appointment(patient, date)
     Appointment.new(patient, self, date)
   end
   
