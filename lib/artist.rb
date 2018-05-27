@@ -22,7 +22,7 @@ class Artist
     song.artist = self
   end
 
-  def genres
+  def genre
     self.Artist.map { |s| s.genre }
   end
   
