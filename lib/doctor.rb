@@ -1,29 +1,30 @@
+require "pry"
 class Doctor
   attr_accessor :name
   attr_reader :patient
   @@all = []
   
-  def initialize(:name)
+  def initialize(name)
     @name = name
-    @songs = []
+    @appointment = []
     @@all << self
   end
   
-  def new_song(name, genre)
-    Song.new(name, self, genre)
+  def new_appointment(date, patient)
+    Appointment.new(patient, self, date)
   end
   
-  def songs 
-    Song.all.select{|something|something.artist==self}
+  def appointments
+    Appointment.all.select{|something|something.doctor==self}
   end
 
-  def add_Artist()
-    self.Artist << Artist
-    song.artist = self
-  end
+ # def add_appointment()
+  #  self.appointment << appointment
+   # appointment.doctor = self
+# end
 
-  def genres
-   songs.map { |s| s.genre }
+  def patients
+   appointments.map { |s|binding.pry s.patient }
   end
   
   def self.all 
