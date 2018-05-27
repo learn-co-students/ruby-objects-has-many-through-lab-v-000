@@ -1,3 +1,4 @@
+require "pry"
 class Artist
   attr_accessor :songs
   attr_reader :name, :genre
@@ -14,7 +15,7 @@ class Artist
   end
   
   def songs 
-    Song.all.select
+    Song.all.select{|something|something.artist==self}
   end
 
   def add_Artist()
@@ -22,8 +23,8 @@ class Artist
     song.artist = self
   end
 
-  def genre
-    self.Artist.map { |s| s.genre }
+  def genres
+   songs.map { |s| s.genre }
   end
   
   def self.all 

@@ -1,17 +1,33 @@
 class Doctor
-  attr_reader :name, :appointments
-
-  def initialize(name)
+  attr_accessor :name
+  attr_reader :patient
+  @@all = []
+  
+  def initialize(:name)
     @name = name
-    @appointments = []
+    @songs = []
+    @@all << self
+  end
+  
+  def new_song(name, genre)
+    Song.new(name, self, genre)
+  end
+  
+  def songs 
+    Song.all.select{|something|something.artist==self}
   end
 
-  def add_appointment(appointment)
-    self.appointments << appointment
+  def add_Artist()
+    self.Artist << Artist
+    song.artist = self
   end
 
-  def patients
-    self.appointments.map { |a| a.patient }
+  def genres
+   songs.map { |s| s.genre }
+  end
+  
+  def self.all 
+    @@all
   end
 
 end
