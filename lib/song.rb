@@ -1,11 +1,13 @@
+require 'pry'
 class Song 
   
   attr_accessor :name, :artist, :genre 
   
   @@all = [] 
   
-  def initialize(name, song, genre)
-    @name = name 
+  def initialize(song_name, artist, genre)
+   # binding.pry
+    @name = song_name 
     @artist = artist 
     @genre = genre 
     @@all << self 
