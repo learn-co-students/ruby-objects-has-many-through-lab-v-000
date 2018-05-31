@@ -8,6 +8,7 @@ describe "Song" do
       jay_z = Artist.new("Jay-Z")
 
       expect{Song.new("Lucifer", jay_z, rap)}.to_not raise_error
+
     end
   end
 
