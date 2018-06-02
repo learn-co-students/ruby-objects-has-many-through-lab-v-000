@@ -23,12 +23,12 @@ describe "Doctor" do
       hevydevy = Patient.new("Devin Townsend")
       appointment = doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
       # expect(doctor_who.appointments).to include(appointment)
-      # expect(appointment.doctor).to eq(doctor_who)
+      expect(appointment.doctor).to eq(doctor_who)
     end
   end
 
   describe "#appointments" do
-    it "has many appointments" do
+    it "has many appointment" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")
       doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
@@ -44,7 +44,7 @@ describe "Doctor" do
       hevydevy = Patient.new("Devin Townsend")
       doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
 
-      # expect(doctor_who.patients).to include(hevydevy)
+      expect(doctor_who.patients).to include(hevydevy)
     end
   end
 end

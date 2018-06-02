@@ -26,7 +26,7 @@ describe "Song" do
     it "belongs to a genre" do
       jay_z = Artist.new("Jay-Z")
       rap = Genre.new("rap")
-      ninety_nine_problems = Song.new("99 Problems", rap, jay_z)
+      ninety_nine_problems = Song.new("99 Problems", jay_z, rap)
 
       expect(ninety_nine_problems.genre).to eq(rap)
     end

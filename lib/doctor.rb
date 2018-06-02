@@ -1,5 +1,5 @@
 class Doctor
-  attr_accessor :name, :new_appointment
+  attr_accessor :name
   @@all = []
 
   def self.all
@@ -8,25 +8,22 @@ class Doctor
 
   def initialize(name)
     @name = name
-    @appointments = []
-    # @patients = []
     @@all << self
   end
 
-  def new_appointment(date, patient)
-    date = Appointment.new(date, patient, self)
-    @appointments << date
-    # @patients << patient
-    date
+  def new_appointment(patient, date)
+    Appointment.new(patient, self, date)
   end
 
   def appointments
-    @appointments
+    Appointment.all.select {|appointment| appointment.doctor == self}
   end
 
   def patients
-    @appointments.select {|appointment| appointment.patient}
+    Appointment.all.collect {|appointment| appointment.patient}
   end
-
+# The Doctor class needs an instance method, #patients,
+# that iterates over that doctor's appointments and collects
+# the patient that belongs to each appointment.
 
 end
