@@ -1,3 +1,5 @@
+require 'pry'
+
 class Artist
   attr_accessor :name
   @@all =[]
@@ -13,11 +15,14 @@ class Artist
     @@all
   end
 
-  def new_song(song,genre,artist)
-    # @songs << Song.new(song, genre)
-    # @song.artist = self
-    Song.new(song,genre,artist)
+
+  def new_song(name, genre)
+    song = Song.new(name, genre, self)
+    @songs << song
+    song
   end
+
+  #binding.pry
 
   def songs
     @songs.select {|song| song.artist}
