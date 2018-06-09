@@ -1,10 +1,27 @@
+require 'pry'
+
 class Artist
+attr_accessor :name, :songs
+@@all = []
 
-  attr_accessor :name
-  @@all = []
-  def initialize(name)
+  def initialize (name)
     @name = name
+    @songs = []
+    @@all << self
+  end
 
+  def add_song (song)
+    @songs << song
+    song.artist = self
+  end
+
+  def genres
+    @@all.collect do |song|
+      song.genre # could need refactor
+    end
+  end
+
+  def save
     @@all << self
   end
 
@@ -13,11 +30,8 @@ class Artist
   end
 
   def new_song(name, genre)
-    @@all << self
-    #song.artist = self
+    song = Song.new(name, self, genre)
   end
 
-  def songs
-    @songs
-  end
+
 end
