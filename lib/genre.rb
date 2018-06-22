@@ -22,7 +22,8 @@ class Genre
   end  
   
   def artists 
+  self.songs.collect { |song| song == atist }
   end 
-
+ 
 
 end 
