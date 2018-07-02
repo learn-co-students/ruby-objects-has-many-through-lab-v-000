@@ -1,6 +1,6 @@
 class Artist 
 
-  attr_accessor :name, :all, :songs, :genres, :new_song
+  attr_accessor :name
   
   @@all = []
   @songs = []
@@ -18,14 +18,17 @@ class Artist
  Song.new(name, self, genre)
   end 
 
-  def songs 
-    @songs
+  def songs
+    Song.all.select do |song|
+      song.artist == self 
+    end 
   end 
   
-
-    
-
-
+  def genres
+    songs.collect do |song|
+      song.genre
+    end 
+  end 
 
 
 end 
