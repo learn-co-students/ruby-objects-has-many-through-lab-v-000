@@ -15,7 +15,6 @@ describe "Genre" do
       rap = Genre.new("rap")
       Song.new("99 Problems", jay_z, rap)
       shrimp = Song.new("Big Shrimpin", jay_z, rap)
-
       expect(rap.songs).to include(shrimp)
     end
   end
