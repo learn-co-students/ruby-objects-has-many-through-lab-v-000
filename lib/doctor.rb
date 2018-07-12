@@ -1,3 +1,5 @@
+require 'pry'
+
 class Doctor
   attr_accessor :name, :appointments
   @@all=[]
@@ -17,7 +19,7 @@ class Doctor
     @appointments
   end
 
-  def new_appointment(date,patient)
+  def new_appointment(patient,date)
     appointment=Appointment.new(patient, self, date)
     @appointments<<appointment
     appointment
@@ -25,7 +27,7 @@ class Doctor
 
   def patients
     self.appointments.collect do |appointment|
-      appointment.patients
+      appointment.patient
     end
   end
 end
