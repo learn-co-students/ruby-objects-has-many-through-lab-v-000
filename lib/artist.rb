@@ -8,9 +8,13 @@ class Artist
     @genres=[]
     @@all<<self
   end
-  
+
   def self.all
     @@all
+  end
+
+  def songs
+    @songs
   end
 
   def new_song(song_name,genre)
@@ -19,9 +23,9 @@ class Artist
     song
   end
 
-    def genres
-      @songs.collect do |song|
-        song.genre
+  def genres
+    @songs.collect do |song|
+      song.genre
       end
     end
   end

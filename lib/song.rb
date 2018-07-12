@@ -6,6 +6,7 @@ class Song
   @name=name
   @artist=artist
   @genre=genre
+  genre.add_song(self)
   @@all<<self
   end
 
