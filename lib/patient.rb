@@ -1,3 +1,4 @@
+
 require'pry'
 
 class Patient
@@ -21,7 +22,6 @@ class Patient
   def doctors
     appointments.map { |patient| patient.doctor }
   end
-
   #def self.all
   #  @@all
   #end
