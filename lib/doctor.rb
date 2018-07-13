@@ -7,13 +7,10 @@ attr_accessor :name
 
 def initialize(name)
   @name = name
-  @appointments = appointments
   @@all << self
 end
 
-def new_appointment(date, patient)
-Appointment.new(patient, self, date)
-end
+
 
 
 
