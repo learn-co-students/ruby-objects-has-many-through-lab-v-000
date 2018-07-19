@@ -1,6 +1,6 @@
+require "pry" 
 class Patient 
   attr_accessor :name
- # attr_reader :appointment
   @@all = [] 
   
   def initialize(name)
@@ -12,8 +12,9 @@ class Patient
     @@all 
   end
   
-  def new_appointment(date, doctor)
-    Appointment.new(date, self, doctor)
+  def new_appointment(doctor, date)
+    Appointment.new(self, date, doctor)
+    
   end
   
   def appointments
@@ -23,5 +24,4 @@ class Patient
   def doctors 
     appointments.map {|appointment| appointment.doctor}
   end
-  
 end
