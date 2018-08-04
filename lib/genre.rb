@@ -18,11 +18,16 @@ class Genre
     song
   end
   
-  def songs(name)
-    name.map { |sn| sn.genre == self }
+  def songs
+    Song.all { |sn| sn.genre == self }
   end
   
-  def artists(name)
-    name.select { |artist| artist == name }
+  def artists
+    songs.map { |song| song.artist }
   end
+  
+  def add_song(song)
+    self.songs << song
+  end
+  
 end
