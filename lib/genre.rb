@@ -18,8 +18,8 @@ class Genre
     song
   end
   
-  def songs(song_name)
-    song.select { |sn| sn.genre == self }
+  def songs(name)
+    name.map { |sn| sn.genre == self }
   end
   
   def artists(name)
