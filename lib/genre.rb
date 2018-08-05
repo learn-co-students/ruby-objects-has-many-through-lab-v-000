@@ -1,5 +1,5 @@
 class Genre 
-  attr_accessor :song, :artist, :genre
+  attr_accessor :name, :artist, :genre
   
   @@all = []
   
@@ -7,8 +7,8 @@ class Genre
     @@all
   end
   
-  def initialize(genre)
-    @genre = genre
+  def initialize(name)
+    @name = name
     @@all << self
   end
   
@@ -17,6 +17,10 @@ class Genre
     song.genre = self
     song
   end
+  
+  def self.name
+    @name
+  end  
   
   def songs
     Song.all { |sn| sn.genre == self }
