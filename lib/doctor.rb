@@ -1,11 +1,13 @@
+require 'pry'
+
 class Doctor 
   
-  attr_accessor :doc_name
+  attr_accessor :name
   
   @@all = [] 
   
-  def initialize(doc_name)
-    @name = doc_name
+  def initialize(name)
+    @name = name
     @@all << self
   end
   
@@ -13,8 +15,8 @@ class Doctor
     @@all
   end 
   
-  def new_appointment(date, patient)
-    appointment = Appointment.new(date, self, patient)
+  def new_appointment(patient, date)
+    appointment = Appointment.new(patient, self, date)
   end 
   
   def appointments 
@@ -22,7 +24,7 @@ class Doctor
   end 
   
   def patients 
+    #binding.pry
     self.appointments.collect {|appointment| appointment.patient}
   end 
-  
 end
