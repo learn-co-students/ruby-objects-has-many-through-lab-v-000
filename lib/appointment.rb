@@ -2,7 +2,7 @@ class Appointment
   attr_accessor :date, :doctor, :patient
   @@all = []
 
-  def initialize(date, patient, doctor)
+  def initialize(patient, date, doctor)
     @date = date
     @patient = patient
     @doctor = doctor
@@ -11,6 +11,10 @@ class Appointment
 
   def self.all
     @@all
+  end
+
+  def patient
+    @patient
   end
 
 end
