@@ -1,3 +1,5 @@
+require 'pry'
+
 class Artist
   attr_accessor :name
   @@all = []
@@ -28,5 +30,7 @@ class Artist
       artist.genre #we use artist because we are calling on a specific artist, not the whole class
     end
   end
+  binding.pry
+  puts "goodbye"
   
 end

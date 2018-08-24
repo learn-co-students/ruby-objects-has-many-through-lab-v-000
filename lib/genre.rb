@@ -13,8 +13,8 @@ class Genre
   end 
   
   def new_song(name, artist)
-    Song.new(name, artist, self) #self refers to artist because we are in the artist class, and the order of name-self-genre needs 
-    #to be in the same order as the initialize method in song.rb
+    Song.new(name, artist, self) #self refers to genre because we are in the genre class, and the order of name-self-genre needs 
+    #to be in the same order as the initialize method in song.rb because the test specifies the order
   end
   
   def songs
