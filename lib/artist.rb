@@ -13,7 +13,7 @@ class Artist
   
   def new_song(name, genre)
     Song.new(name, self, genre) #self refers to artist because we are in the artist class, and the order of name-self-genre needs 
-    #to be in the same order as the initialize method in song.rb
+      #to be in the same order as the initialize method in song.rb
   end
     
   def songs
@@ -21,6 +21,7 @@ class Artist
       s.artist == self #self refers to an instance of the Artist class
     end
   end 
+
   
   def genres
     songs.collect do |artist|
@@ -29,5 +30,3 @@ class Artist
   end
   
 end
-    
-  

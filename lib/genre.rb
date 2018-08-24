@@ -7,6 +7,7 @@ class Genre
   end 
   
   def initialize(name)
+
     @name = name
     @@all << self
   end 
@@ -27,6 +28,5 @@ class Genre
     genre.artist #returning the artist associated with that Genre
     end
   end 
-    
-  
+
 end 
