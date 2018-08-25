@@ -1,6 +1,5 @@
 class Genre
   attr_accessor :name
-
   @@all = []
 
   #instantiates a new Genre object with a name and adds it to the class variable self for storage
