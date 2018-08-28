@@ -1,3 +1,5 @@
+require 'pry'
+
 class Artist
   attr_accessor :name, :songs
 
@@ -14,11 +16,11 @@ class Artist
   end
 
   def new_song(name, genre)
-    self.songs << Song.new(name, self, genre)
+    Song.new(name, self, genre)
   end
 
   def songs
-    Songs.all.select do |song|
+    Song.all.select do |song|
       song.artist == self
     end
   end
