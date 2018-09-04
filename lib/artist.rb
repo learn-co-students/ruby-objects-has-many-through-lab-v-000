@@ -8,7 +8,7 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
-    @genres = []
+    @genres = genres
     @@all << self
   end
   
@@ -20,6 +20,9 @@ class Artist
     song = Song.new(name, self, genre)
     @songs << song
     song
+  end
+  def genres
+    self.songs.collect{|song| song.genres}
   end
   
 end

@@ -8,4 +8,5 @@ class Song
         @genre = genre
         @@all << self
     end
+    
 end
