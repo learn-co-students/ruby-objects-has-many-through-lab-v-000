@@ -12,10 +12,13 @@ def self.all
   @@all
 end
 
-def new_appointment(doctor,date)
-  Appointment.new(doctor, date, self)
+def new_appointment(doctor, date)
+  Appointment.new(self, doctor, date)
 end
 
-
-  
+def doctors 
+  Appointment.all.collect do |appointments|
+    appointments.doctor
+  end
+end
 end
