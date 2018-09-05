@@ -21,8 +21,6 @@ class Artist
     @songs << song
     song
   end
-  def genres
-    self.songs.collect{|song| song.genres}
-  end
+  
   
 end
