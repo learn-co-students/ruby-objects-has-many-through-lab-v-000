@@ -29,19 +29,15 @@ describe 'Patient' do
   end
 
   describe '#appointments' do
-    it 'returns all appointments associated with this Patient' do
-      doctor_who = Doctor.new('The Doctor')
-      doctor_smith = Doctor.new('Matt Smith')
-      steve = Patient.new('Steve')
-      mike = Patient.new('Mike')
-      appointment = Appointment.new('Friday, January 32nd', steve, doctor_who)
-      appointment_2 = Appointment.new('Saturday, January 33rd', steve, doctor_smith)
-      appointment_3 = Appointment.new('Sunday, January 34th', mike, doctor_who)
+    it 'returns all appointments' do
+      doctor_dog = Doctor.new('Dog')
+      doctor_howser = Doctor.new('Howser')
+      steve = Patient.new('Steve from Blues Clues')
+      appointment_one = steve.new_appointment(doctor_dog, 'Friday, January 32nd')
+      appointment_two = steve.new_appointment(doctor_howser, 'Saturday, January 32nd')
 
-      expect(steve.appointments).to include(appointment)
-      expect(steve.appointments).to include(appointment_2)
-      expect(steve.appointments).to_not include(appointment_3)
-      expect(mike.appointments).to include(appointment_3)
+      expect(steve.appointments).to include(appointment_one)
+      expect(steve.appointments).to include(appointment_two)
     end
   end
 
