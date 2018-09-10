@@ -29,7 +29,7 @@ describe 'Patient' do
   end
 
   describe '#appointments' do
-    it 'has many doctors through appointments' do
+    it 'returns all appointments' do
       doctor_dog = Doctor.new('Dog')
       doctor_howser = Doctor.new('Howser')
       steve = Patient.new('Steve from Blues Clues')
@@ -39,6 +39,7 @@ describe 'Patient' do
       expect(steve.appointments).to include(appointment_one)
       expect(steve.appointments).to include(appointment_two)
     end
+  end
 
   describe '#doctors' do
     it 'has many doctors through appointments' do
