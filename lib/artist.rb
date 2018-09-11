@@ -1,5 +1,14 @@
 class Artist
+
+  attr_accessor :name
+
   @@all = []
+
+  def songs
+    Song.all.select do |song|
+      song.artist == self 
+    end
+  end
 
   def self.all
     @@all
@@ -11,8 +20,10 @@ class Artist
   end
 
   def new_song(name, genre)
-    song = Song.new(name, genre)
-    song.
+
+    # binding.pry
+    Song.new(name, self, genre)
+
   end
 
 end
