@@ -39,6 +39,7 @@ describe 'Patient' do
       expect(steve.appointments).to include(appointment_one)
       expect(steve.appointments).to include(appointment_two)
     end
+  end
 
   describe '#doctors' do
     it 'has many doctors through appointments' do
