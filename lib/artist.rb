@@ -16,10 +16,10 @@ class Artist
   end
   
   def songs
-    Song.all.select{|song| song.artist}
+    Song.all.select{|song| song.artist == self}
   end
 
   def genres
-    Song.all.collect{|song| song.genre}
+    self.songs.collect{|song| song.genre}
   end
 end
