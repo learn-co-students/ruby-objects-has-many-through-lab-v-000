@@ -1,17 +1,28 @@
+require 'pry'
+
 class Artist 
+  attr_accessor :name
+  
   @@all = []
   
-  
   def self.all
-    @@all << self
+    @@all
   end
   
   def initialize(name)
-    @@all << @name 
+    @@all << self
+    @name = name
   end
   
   def new_song(name, genre)
-  artist.song
+    Song.new(name, genre, self)
+  end
+
+  def songs
+    Song.all.select{|song| song.artist == self}
+  end
   
-end
+  def genres 
+    Song.collect(&:genre)
+  end
 end
