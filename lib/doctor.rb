@@ -1,3 +1,5 @@
+require 'pry'
+
 class Doctor
   attr_accessor :name 
   
@@ -15,11 +17,20 @@ class Doctor
   def appointments 
     Appointment.all.select do |appointment|
       appointment.doctor = self 
+    
     end 
   end 
   
-  def new_appointment(date, patient)
-    Appointment.new(patient, self, date)
+  def new_appointment(patient, date)
+    saved = Appointment.new(patient, self, date)
+    
+  end 
+  
+  def patients 
+    appointments.map do |appointment|
+   
+      appointment.patient 
+    end 
   end 
   
 end 
