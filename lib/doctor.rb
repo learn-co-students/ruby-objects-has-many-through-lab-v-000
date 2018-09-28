@@ -22,12 +22,12 @@ class Doctor
   end 
   
   def new_appointment(patient, date)
-    saved = Appointment.new(patient, self, date)
+   Appointment.new(patient, self, date)
     
   end 
   
   def patients 
-    appointments.map do |appointment|
+    appointments.collect do |appointment|
    
       appointment.patient 
     end 
