@@ -52,4 +52,5 @@ describe 'Patient' do
       expect(hevydevy.doctors).to include(doctor_what)
     end
   end
-end
+end 
+end 
