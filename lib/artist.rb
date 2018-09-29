@@ -15,10 +15,10 @@ class Artist
     @@all
   end
   
-  def new_song(song, genre)
+  def new_song(song_name, genre)
     genre = Genre.new(genre)
-    song = Song.new(song, self, genre)
-    @songs << song
+    song_name = Song.new(song_name, self, genre)
+    @songs << song_name
   end
   
   
@@ -27,6 +27,11 @@ class Artist
   #     jay_z = Artist.new("Jay-Z")
   #     rap = Genre.new("rap")
   #     ninety_nine_problems = jay_z.new_song("Ninety Nine Problems", rap)
+  
+  
+  
+  
+  
   
   def songs
     Song.all.select do |song|
@@ -39,9 +44,5 @@ class Artist
       song.genre
     end
   end
-  
-  
-  
-  
   
 end
