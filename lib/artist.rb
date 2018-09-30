@@ -8,7 +8,6 @@ class Artist
   def initialize(name)
     @name = name
     @@all << self
-    @songs = []
   end
   
   def self.all
@@ -16,22 +15,8 @@ class Artist
   end
   
   def new_song(song_name, genre)
-    genre = Genre.new(genre)
     song_name = Song.new(song_name, self, genre)
-    @songs << song_name
   end
-  
-  
-  # describe "#new_song" do
-  #   it "given a name and genre, creates a new song associated with that artist" do
-  #     jay_z = Artist.new("Jay-Z")
-  #     rap = Genre.new("rap")
-  #     ninety_nine_problems = jay_z.new_song("Ninety Nine Problems", rap)
-  
-  
-  
-  
-  
   
   def songs
     Song.all.select do |song|
