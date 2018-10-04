@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "Appointment" do
 
-  describe ".all" do
+   describe ".all" do
     it "knows about all appointments that have been created" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")

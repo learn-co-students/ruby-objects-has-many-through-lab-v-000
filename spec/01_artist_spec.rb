@@ -52,5 +52,4 @@ describe "Artist" do
       expect(jay_z.songs.first.genre).to eq(rap)
     end
   end
-
 end
