@@ -7,14 +7,20 @@ class Doctor
     @@all << self 
   end  
   
+  def self.all 
+    @@all 
+  end 
+  
   def new_appointment(patient, date) 
-    Appointment.new(patient, date) 
+    Appointment.new(patient, self, date) 
   end 
   
   def appointments 
-    appointments.all.find {|appointments| appointment.doctor == self}
+    Appointments.all.select {|appointment| appointment.doctor == self}
   end 
   
   def patients 
-    #appointments.collect()
+    appointments.collect(patients)
   end 
+  
+end   
