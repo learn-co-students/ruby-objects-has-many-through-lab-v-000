@@ -1,40 +1,43 @@
-
+require 'pry'
 class Doctor 
-  attr_accessor :name 
+  attr_accessor :name, :appointments, :patients   
   @@all = [] 
   
   def initialize(name)
     @name = name 
     @@all << self
     @appointments = []
+    @patients = [] 
   end  
   
-  def self.all 
+  
+   def self.all 
     @@all 
   end 
   
+  
   def new_appointment(patient, date) 
-    Appointment.new(patient, self, date) 
-  end
+    Appointment.new(date, patient, self) 
+  end 
   
-  # def diff(a, b)
-  #   b - a
-  # end
-  
-  # diff(1, 2) =>
-  
-  # def diff(b, a)
-  #   b-a
-  # end
+  # binding.pry 
   
   
   def appointments 
     Appointment.all.select { |appointment| appointment.doctor == self}
-  end 
+  end  
+  
+  
+  # def add_appointment(appt)
+  #   @appointments << appt
+  # end
+
+      
   
   def patients 
-    appointments.collect { |appointment| appointment.patient}
+  appointments.collect { |appointment| appointment.patient}
+  end
+
+end
    
-  end 
   
-end   
