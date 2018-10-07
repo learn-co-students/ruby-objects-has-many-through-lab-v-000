@@ -4,23 +4,24 @@ class Doctor
   
   def initialize(name)
     @name = name 
-    @@all << self 
+    @@all << self
+    @appointments = []
   end  
   
   def self.all 
     @@all 
   end 
   
-  def new_appointment(patient, date) 
-    Appointment.new(patient, self, date) 
+  def new_appointment(date, patient) 
+    Appointment.new(date, patient, self) 
   end 
   
   def appointments 
-    Appointments.all.select {|appointment| appointment.doctor == self}
+    Appointment.all.select { |appointment| appointment.doctor == self}
   end 
   
   def patients 
-    appointments.collect(patients)
+    Appointments.collect { |appointment| appointment.patient}
   end 
   
 end   

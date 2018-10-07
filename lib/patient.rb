@@ -4,26 +4,28 @@ class Patient
   
   def initialize(name) 
     @name = name 
-    @@all << self 
+    @@all << self
+    @appointments = []
   end
     
-    def self.all 
+  def self.all 
       @@all 
-    end 
+  end 
+   
     
-   def new_appointment(doctor, date)
-     Appointment.new(self, doctor, date) 
-    end 
-    
-    
-    def appointments 
-      Appointments.all.select {|appointment| appointment.patient == self} 
-          end
-    end
+  def new_appointment(doctor, date)
+    Appointment.new(patient) 
+  end 
     
     
-    def doctors
-      #appointments.map(doctor)
-        end
-    end
- end  
+  def appointments 
+      Appointment.all.select { |appointment| appointment.patient == self} 
+  end
+    
+    
+  def doctors
+      appointments.collect {|appointment|  appointment.doctor}
+  end 
+
+end 
+
