@@ -1,3 +1,4 @@
+require 'pry' 
 class Patient 
   attr_accessor :name, :appointments  
   @@all = [] 
@@ -6,19 +7,25 @@ class Patient
     @name = name 
     @@all << self
     # @@all = []
+    @patients = [] 
     @appointments = []
+    
   end
     
   def self.all 
       @@all 
   end 
    
+   
     
   def new_appointment(doctor, date)
-    Appointment.new(patient) 
+    Appointment.patient.new
   end 
-    
-    
+ 
+  #binding.pry
+ 
+ 
+ 
   def appointments 
       Appointment.all.select { |appointment| appointment.patient == self} 
   end
