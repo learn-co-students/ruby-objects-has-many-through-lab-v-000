@@ -7,8 +7,6 @@ class Artist
   def initialize(name)
     @name = name
     @@all << self
-    
-    
   end
   
   def self.all
@@ -24,6 +22,13 @@ class Artist
     Song.all.select do |song|
       #for each song, does the artist of that song == self?
       song.artist == self
+    end
+  end
+    
+  def genres
+    Genre.all.select do |genre|
+       # binding.pry
+    genre.artist = self
     end
   end
 end
