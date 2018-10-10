@@ -14,14 +14,18 @@ class Genre
   
   def songs
     Song.all.select do |song|
-      binding.pry
+      #binding.pry
       #for each song, does the genre of that song == self?
-      genre.song == self
+      song.genre == self
     end
-      
-    
   end
-  
- 
+    
+  def artists
+    Artist.all.select do |artist|
+      binding.pry
+      artist.genre == self
+      self 
+      end
+  end
 end
   
