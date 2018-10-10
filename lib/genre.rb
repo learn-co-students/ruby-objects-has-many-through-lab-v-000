@@ -13,6 +13,12 @@ class Genre
   end
   
   def songs
+    Song.all.select do |song|
+      binding.pry
+      #for each song, does the genre of that song == self?
+      genre.song == self
+    end
+      
     
   end
   
