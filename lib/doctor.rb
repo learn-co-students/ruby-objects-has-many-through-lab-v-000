@@ -19,5 +19,31 @@ class Doctor
     @appointments << appointment
     appointment
   end
+  
+  def patients
+    self.patient.include?patient
+      
+  binding.pry
+    end
+    
+  
+ 
+    
+      
+    #The Doctor class needs an instance method, #patients, that iterates over that doctor's appointments and collects the patient that belongs to each appointment.
+      
+      
+   #Doctor(self) has many patients through appointments
+    #create a method to collect all appointments' of patients 
+    
+ 
+    
+    
+   
+    
+    
+ 
+    
+  
     
 end
