@@ -20,11 +20,20 @@ class Doctor
     appointment
   end
   
-  def patients
-    self.patient.include?patient
-      
-  binding.pry
+  def appointments
+    Appointment.all.select do |appt|
+    appt.doctor == self
+    
     end
+    
+  end
+  
+  def patients
+    self.appointments.collect do |appt|
+    appt.patient  
+    end
+  end
+end
     
   
  
@@ -46,4 +55,3 @@ class Doctor
     
   
     
-end
