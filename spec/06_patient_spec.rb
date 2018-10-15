@@ -1,55 +1,28 @@
-require 'spec_helper'
+require "spec_helper"
 
-describe 'Patient' do
-  describe '#new' do
-    it 'initializes with a name' do
-      expect { Patient.new('Devin') }.to_not raise_error
+describe "Patient" do
+  let!(:martin) { Patient.new("Martin Jones") } 
+  let!(:doctor_who) { Doctor.new("The Doctor") }
+  let!(:appointment) { Appointment.new("Friday, January 32nd", doctor_who) }
+
+  describe "#new" do 
+    it "initializes with a name" do 
+      expect{Patient.new("Sophie")}.to_not raise_error
     end
   end
 
-  describe '#new_appointment' do
-    it 'given a doctor and date, creates a new appointment belonging to that patient' do
-      doctor_who = Doctor.new('The Doctor')
-      hevydevy = Patient.new('Devin Townsend')
-      appointment = hevydevy.new_appointment(doctor_who, 'Friday, January 32nd')
-
-      expect(hevydevy.appointments).to include(appointment)
-      expect(appointment.patient).to eq(hevydevy)
-    end
+  describe "#add_appointment" do
+    it "takes in an argument of an apppointment and adds that appointment to it's list of appointments and tells that appointment it belongs to the patient" do 
+      martin.add_appointment(appointment)
+      expect(martin.appointments).to include(appointment)
+      expect(appointment.patient).to eq(martin)
+    end 
   end
 
-  describe '.all' do
-    it 'knows about all patients' do
-      zero = Patient.new('Zero')
-      good = Patient.new('Good')
-
-      expect(Patient.all).to include(zero)
-      expect(Patient.all).to include(good)
-    end
-  end
-
-  describe '#appointments' do
-    it 'has many doctors through appointments' do
-      doctor_dog = Doctor.new('Dog')
-      doctor_howser = Doctor.new('Howser')
-      steve = Patient.new('Steve from Blues Clues')
-      appointment_one = steve.new_appointment(doctor_dog, 'Friday, January 32nd')
-      appointment_two = steve.new_appointment(doctor_howser, 'Saturday, January 32nd')
-
-      expect(steve.appointments).to include(appointment_one)
-      expect(steve.appointments).to include(appointment_two)
-    end
-
-  describe '#doctors' do
-    it 'has many doctors through appointments' do
-      doctor_who = Doctor.new('The Doctor')
-      doctor_what = Doctor.new('Das Doktor')
-      hevydevy = Patient.new('Devin Townsend')
-      hevydevy.new_appointment(doctor_who, 'Friday, January 32nd')
-      hevydevy.new_appointment(doctor_what, 'Saturday, January 32nd')
-
-      expect(hevydevy.doctors).to include(doctor_who)
-      expect(hevydevy.doctors).to include(doctor_what)
+  describe "#doctors" do 
+    it "has many doctors through appointments" do 
+      martin.add_appointment(appointment)
+      expect(martin.doctors).to include(doctor_who)
     end
   end
 end
