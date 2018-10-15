@@ -23,7 +23,6 @@ class Doctor
   def appointments
     Appointment.all.select do |appt|
     appt.doctor == self
-    binding.pry
     end
   end
   
