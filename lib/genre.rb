@@ -14,14 +14,14 @@ class Genre
   end 
   
   def songs 
-    genre.map do |genre|
-   genre.song 
+    self.map do |genre|
+   self.song 
   end 
   end 
   
   def artists
-    genre.map do |genre|
-    genre.artist 
+    self.map do |genre|
+    self.artist 
     end 
   end 
   
