@@ -24,7 +24,7 @@ class Patient
     Appointment.new(self, doctor, date)
   end 
   
-  def doctors 
+  def doctors
     Appointment.all.collect do |appt| 
       if appt.patient == self
         appt.doctor 
@@ -32,3 +32,12 @@ class Patient
     end
   end 
 end 
+
+
+  # def appointments
+  #   Appointment.all.select { |appointment| appointment.patient == self }
+  # end
+
+  # def doctors
+  #   appointments.map(&:doctor)
+  # end
