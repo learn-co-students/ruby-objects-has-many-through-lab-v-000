@@ -1,5 +1,5 @@
 class Doctor 
-  attr_accessor :name 
+  attr_accessor :name
   
   @@all = []
   
@@ -9,18 +9,23 @@ class Doctor
   end 
   
   def self.all
-    @@all 
+    @@all
   end 
   
-  def new_appointment
-    #instance of patient class and creates a new appointment that belongs to the doctor instance
+  def appointments
+    Appointment.all.select do |appt|
+      appt.doctor == self
+    end 
   end 
   
-  def appointments 
-    #iterates through all appointments and finds those that belong to this doctor
+  def new_appointment(patient, date)
+    appointment = Appointment.new(patient, self, date)
+    appointment
   end 
   
   def patients 
-    #iterates over dr.'s appointments and collects the patient that belongs to each appt 
+    appointments.collect do |appt|
+      appt.patient 
+    end
   end 
 end 
