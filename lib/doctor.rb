@@ -1,36 +1,32 @@
 class Doctor
-    attr_accessor :patient, :date, :appointment
-    
-    @@all = []
+ attr_accessor :name, :appointment, :patient
+  
+@@all = []
+
 
 def initialize(name)
-   @name = name 
+    @name = name 
     @@all << self
-  end
-  
+end
+
 def new_appointment(patient, date)
- Appointment.new(patient, date, self)
+  Appointment.new(patient, self, date)
 end 
 
-def genres
-    Genre.all.select do |song|
-      genre.artist == self 
-    end
-  end
-  
-def songs
-    Song.all.select do |song|
-      song.artist == self
-    end
-  end
-  
- def genres
-    songs.map do |song|
-      song.genre
-    end 
+
+ def appointments
+ Appointment.all.select do |appointment|
+      appointment.doctor == self
+   end
+end
+
+def patients
+  appointments.map do |appointment|
+   appointment.patient
   end 
-  
-  def self.all
+end 
+
+ def self.all
     @@all
   end 
   
