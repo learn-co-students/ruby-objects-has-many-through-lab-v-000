@@ -28,5 +28,6 @@ class Artist
       song.genre
     end
   end
+  #we are wanting to expose genres, we aren't looking for one particular one.
 
 end
