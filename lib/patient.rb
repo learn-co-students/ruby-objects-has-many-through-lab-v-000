@@ -16,6 +16,7 @@ class Patient
   def new_appointment(doctor, date)
     Appointment.new(self, date, doctor)
   end
+  #pay attention to the order of the arguments in the specfile too if they don't match, make them
 
   def appointments
     Appointment.all.select do |appt|
