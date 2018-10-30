@@ -10,9 +10,13 @@ class Genre
   
   
   def self.all 
-    @@all 
+ @@all 
   end 
-  
- 
+   
+   def songs 
+    @songs
+   end 
+
   
 end 
+
