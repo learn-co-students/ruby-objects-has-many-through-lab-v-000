@@ -13,11 +13,11 @@ class Genre
   end
 
   def songs
-    Song.all.select {|song| song.genre == self}   #or self.genre? (may be same thing)
+    Song.all.select {|song| song.genre == self}
   end
 
   def artists
-    self.songs.map {|song| song.artist}   #i think it should be using the songs method on self (current/selected genre)
+    self.songs.map {|song| song.artist}
   end
 
 end
