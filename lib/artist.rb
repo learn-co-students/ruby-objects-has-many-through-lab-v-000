@@ -1,5 +1,5 @@
 class Artist
-  attr_accessor :name, :genre, :artist
+  attr_accessor :name, :genre
 
   @@all = []
 
@@ -21,7 +21,7 @@ class Artist
   end
 
   def genres
-    self.songs.map {|song| song.genre} 
+    self.songs.map {|song| song.genre}
     #   if song.artist == self
     #     song.genre
     #   end
