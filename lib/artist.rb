@@ -1,4 +1,4 @@
-class assert_instance_of
+class Artist 
  
  attr_accessor :name 
  @@all = []
@@ -14,14 +14,12 @@ class assert_instance_of
     @@all 
   end
   
-  def new_song(name, genre)
-    Song.new(name, genre)
-    song.artist = self #tell song it belongs to this artist
+  def new_song(name, self, genre)
+    Song.new(name, self, genre)
   end
   
   def songs 
-    Song.all.select do |song|
-      song.artist == self
+    Song.all.select {|song| song.artist == self}
   end
   
   def genres 
