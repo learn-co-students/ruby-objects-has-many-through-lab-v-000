@@ -1,6 +1,6 @@
 class assert_instance_of
  
- attr_accessor :name, 
+ attr_accessor :name 
  @@all = []
  
  
