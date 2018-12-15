@@ -1,22 +1,31 @@
+require 'pry'
+
 class Doctor
-  attr_accessor :name
-  @@all = []
 
-  def initialized(name)
-    @name = name
-    @@all << self
-  end
+	attr_accessor :name
+	@@all = []
 
-  def new_appointment(patient, date) # date string
-    Appointment.new(date, patient, self)
-  end
+	def initialize(name)
+		@name = name
+		@@all << self
+	end
 
-  def appointments
+	def new_appointment(date, patient)
+		Appointment.new(date, patient, self)
+	end
 
-  end
+# create array of a doctor's appts
+	def appointments
+		Appointment.all.collect do
+			|appt| appt.doctor == self
+		end
+	end
 
-  def patients
+# array of patients for all a doc's appts
+	def patients
+		self.appointments.collect do
+			|appt| appt.patient
+		end
+	end
 
-  end
-
-end #class end
+end  # class end
