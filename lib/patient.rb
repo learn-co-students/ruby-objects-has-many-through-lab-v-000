@@ -10,23 +10,23 @@ class Patient
 		@@all << self
 	end
 
-  def self.all
+	def self.all
 		@@all
 	end
 
 	def new_appointment(date, doctor)
-		Appointment.new(date, self, doctor)
+		Appointment.new(self, date, doctor)
 	end
 
 	def appointments
-		Appointment.all.collect do
-			|appt| appt.patient == self
+	  Appointment.all.collect do |appt|
+			appt if appt.patient == self
 		end
 	end
 
 	def doctors
-		self.appointments.collect do
-			|appt| appt.doctor
+		Appointment.all.collect do |appt|
+			appt.doctor if appt.patient == self
 		end
 	end
 end #class end

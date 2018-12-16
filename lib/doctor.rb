@@ -1,5 +1,4 @@
 require 'pry'
-
 class Doctor
 
 	attr_accessor :name
@@ -14,22 +13,23 @@ class Doctor
 		@@all
 	end
 
-	def new_appointment(date, patient)
-		Appointment.new(date, patient, self)
+	def new_appointment(patient, date)
+		Appointment.new(patient, date, self)
 	end
 
 # create array of a doctor's appts
 	def appointments
-		Appointment.all.collect do
-			|appt| appt.doctor == self
+    appointments = Appointment.all.collect do
+			|appt| appt if appt.doctor == self
 		end
 	end
 
 # array of patients for all a doc's appts
 	def patients
-		self.appointments.collect do
-			|appt| appt.patient
+		Appointment.all.collect do |appt|
+				appt.patient if appt.doctor == self
 		end
 	end
+
 
 end  # class end
