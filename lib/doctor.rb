@@ -17,11 +17,5 @@ class Doctor
     appointment = Appointment.new(patient, self, date)
     @appointments << appointment
   end
-  def appointments
-  @appointments.select {|appointment| appointment.doctor}
-end
 
-def patients
-  @appointments.collect {|appointment| appointment.patient }
-end
 end
