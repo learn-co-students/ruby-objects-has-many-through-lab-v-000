@@ -1,7 +1,8 @@
 class Genre 
-  attr_accessor :name 
+  attr_accessor :song
+  attr_reader :name, :genre   #Doesn't changed 
   
-  @@all=[]
+   @@all=[]
   
   def initialize(name)
     @name = name 
@@ -9,14 +10,21 @@ class Genre
   end 
   
   
-  def self.all 
- @@all 
+  def self.all  #class method
+    @@all       #list each genre 
   end 
    
-   def songs 
-    @songs
+   def songs      #iterates through songs/finds songs that belong to that genre 
+   Song.all.select do |song|
+     song.genre == self
    end 
-
+  end 
+ 
+  def artists              
+   Song.all.map do |song|    #iterates over the genres collection of songs
+     song.artist            #collects artistthat own each Song
+  end 
+end 
   
 end 
 
