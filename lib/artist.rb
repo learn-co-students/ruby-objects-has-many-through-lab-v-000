@@ -13,9 +13,9 @@ class Artist
   end 
   
   def new_song(song_name, genre)
-    # @song_name = []
+    Artist.new(song_name, genre)
     # @genre = []
-    @new_song = [song_name, genre] 
+    # @new_song = [song_name, genre] 
   end
   
 end   
