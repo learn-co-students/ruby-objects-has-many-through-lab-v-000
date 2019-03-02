@@ -10,6 +10,8 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
+
+    @@all << self
   end
 
 end #<---- CLASS end
