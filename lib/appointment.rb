@@ -14,9 +14,7 @@ class Appointment
   end
 
   def patient
-    Patient.all.select do |p|
-      p.name
-    end
+    patient.name
   end
 
   end
