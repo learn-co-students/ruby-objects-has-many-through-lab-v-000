@@ -6,14 +6,15 @@ class Appointment
     @date = date
     @patient = patient
     @doctor = doctor
-    self.class.all << self
+    @@all << self
   end
 
   def self.all
     @@all
   end
 
-  def patient
-  end
+  # def patient
+  #   Patient.all.select { |each_patient| each_patient.name }
+  # end
 
   end

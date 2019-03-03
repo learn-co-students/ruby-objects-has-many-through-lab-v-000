@@ -11,17 +11,17 @@ class Artist
     @@all
   end
 
-  def new_song(name, genre)
+  def new_song(name, genre) #creates NEW SONG associated with that ARTIST
     Song.new(name, self, genre)
   end
 
-  def songs
+  def songs #HAS MANY songs
     Song.all.select do |song|
       song.artist == self
     end
   end
 
-  def genres
+  def genres #HAS MANY genres, THROUGH songs
     songs.collect do |song|
       song.genre
     end

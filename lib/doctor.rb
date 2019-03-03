@@ -1,5 +1,3 @@
-require 'pry'
-
 class Doctor
   attr_accessor :appointments, :patients
   attr_reader :name
@@ -7,7 +5,7 @@ class Doctor
 
   def initialize(name)
     @name = name
-    self.class.all << self
+    @@all << self
   end
 
   def self.all
@@ -19,7 +17,7 @@ class Doctor
   end
 
   def appointments
-    Appointment.all.select { |appt| appt.doctor == self }
+    Appointment.all.select { |appt| appt.doctor }
   end
 
   def patients

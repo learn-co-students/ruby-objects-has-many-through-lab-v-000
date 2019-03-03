@@ -11,12 +11,12 @@ class Genre
     @@all
   end
 
-  def songs
+  def songs #HAS MANY songs
     Song.all.select { |song| song.genre == self }
     #grab all the SONG OBJECTS that their genres match to the one being called on
   end
 
-  def artists
+  def artists #HAS MANY artists, THROUGH songs
     songs.collect { |song| song.artist }
     #refer to the #SONGS method which pulls relevent songs to the genre
     #and return the relevent ARTISTs

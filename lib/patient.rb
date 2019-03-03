@@ -1,5 +1,5 @@
 class Patient
-  attr_accessor :name
+  attr_accessor :name, :doctors, :appointments
   @@all = []
 
   def self.all
@@ -8,7 +8,18 @@ class Patient
 
   def initialize(name)
     @name = name
-    self.class.all << self
+    @@all << self
   end
 
+  def new_appointment(doctor, date)
+    Appointment.new(date, self, doctor)
+  end
+
+  def appointments
+    Appointment.all.select { |each_appointment| each_appointment.doctor }
+  end
+
+  def doctors
+    appointments.collect { |each_appointment| each_appointment.doctor }
+  end
 end
