@@ -14,7 +14,6 @@ class Appointment
   end
 
   def patient
-    patient.name
   end
 
   end
