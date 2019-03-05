@@ -1,9 +1,8 @@
 class Patient 
-  attr_accessor :name, :appointments, :doctors
+  attr_accessor :name
   
   @@all = []
-  @appointments = []
-  
+
   def initialize(name)
     @name = name
     @@all << self
@@ -20,12 +19,12 @@ class Patient
 
   # iterates through the Appointments array and returns Appointments that belong to the patient
   def appointments
-    Appointment.all.select {|appt| appt.doctor}
+    Appointment.all.select {|appt| appt.patient == self}
   end
 
   # iterates over that patient's Appointments and collects the doctor that belongs to each Appointment
   def doctors
-    appointments.collect {|appt| appt.doctor}
+    appointments.map {|appt| appt.doctor}
   end 
   
 end  
