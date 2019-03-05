@@ -1,5 +1,5 @@
 class Patient 
-  attr_accessor :name, :appointments, :patients
+  attr_accessor :name, :appointments, :doctors
   
   @@all = []
   @appointments = []
@@ -15,22 +15,17 @@ class Patient
   
   # takes in an argument of a doctor and a date and creates a new Appointment. The Appointment should know that it belongs to the patient
   def new_appointment(doctor, date)
-    Appointment.all.select {|doctor| doctor.date == self}
+    Appointment.new(date, self, doctor)
   end
 
   # iterates through the Appointments array and returns Appointments that belong to the patient
   def appointments
-    self.appointments.collect {|appt| appt.patients}
+    Appointment.all.select {|appt| appt.doctor}
   end
-
-  # has many patients, through appointments
-  def patients
-    self.appointments.collect {|appt| appt.patient}
-  end 
 
   # iterates over that patient's Appointments and collects the doctor that belongs to each Appointment
   def doctors
-    self.appointments.collect {|appt| appt.doctors}
+    appointments.collect {|appt| appt.doctor}
   end 
   
 end  
