@@ -16,10 +16,10 @@ belong to a genre. A genre has many songs and an artist has many songs. An
 artist has many genres through its songs and a genre has many artists through
 its songs.
 
-We also have an `Appointment`, `Doctor` and `Patient` class. `Appointment`s belong
-to a `Patient` and a `Doctor`. A `Doctor` has many `Appointment`s and a `Patient` has
-many `Appointment`s. A `Doctor` has many `Patient`s through its `Appointment`s and a
-`Patient` has many `Doctor`s through its `Appointment`s.
+We also have an `Appointment`, `Doctor` and `Patient` class. `Appointment`s
+belong to a `Patient` and a `Doctor`. A `Doctor` has many `Appointment`s and a
+`Patient` has many `Appointment`s. A `Doctor` has many `Patient`s through its
+`Appointment`s and a `Patient` has many `Doctor`s through its `Appointment`s.
 
 ## Instructions
 
@@ -101,4 +101,3 @@ Now let's move on to our `Doctor`/`Appointment`/`Patient` domain model.
   `Appointment`.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/ruby-objects-has-many-through-lab'>Has Many Objects Through Lab</a> on Learn.co and start learning to code for free.</p>
-
