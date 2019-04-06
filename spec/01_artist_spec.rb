@@ -52,7 +52,7 @@ describe "Artist" do
       expect(jay_z.genres).to include(rap)
       # binding.pry
       # expect(jay_z.songs.first.genre).to eq(rap)
-      expect(jay_z.songs.first.genre.name).to eq("rap")
+      expect(jay_z.songs.last.genre).to eq(rap)
     end
   end
 
