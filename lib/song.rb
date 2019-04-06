@@ -10,6 +10,11 @@ def initialize(name, artist, genre)
     @@all << self
 end
 
-def self.new(name, artist, genre)
-  Song.new(self, name, artist, genre)
+def self.all
+  @@all
+end
+
+
+
+
 end
