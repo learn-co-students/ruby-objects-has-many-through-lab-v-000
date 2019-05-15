@@ -1,10 +1,17 @@
-require 'pry'
 
-class Genre 
-  attr_accessor :name 
-  
-  def initialize(name)
-    @name = name
-  end 
-  
-end 
+class Genre
+	@@all = []
+	attr_reader :name, :songs, :artists
+
+	def initialize(name)
+		@name = name
+		@@all << self
+		@songs = []
+		@artists = []
+	end
+
+	def self.all
+		@@all
+	end
+
+end
