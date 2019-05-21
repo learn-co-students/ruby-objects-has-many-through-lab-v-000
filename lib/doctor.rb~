@@ -9,8 +9,4 @@ class Doctor
 	 def add_appointment(appt)
 		@appointments << appt
 	 end
-	 
-	 def patients
-	 	@appointments.map { |a| a.patient }
-	 end
 end
