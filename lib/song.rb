@@ -14,13 +14,4 @@ class Song
     @@all
   end
 
-  # def genre
-  #
-  # end
-
-  # def waiters
-  #   meals.map do |meal|
-  #     meal.waiter
-  #   end
-  # end
 end
