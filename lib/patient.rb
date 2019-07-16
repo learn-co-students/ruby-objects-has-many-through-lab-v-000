@@ -27,7 +27,7 @@ end
 
 def doctors
   #binding.pry
-  self.appointments.select do |appointment|
+  self.appointments.map do |appointment|
     appointment.doctor
   end
 end
