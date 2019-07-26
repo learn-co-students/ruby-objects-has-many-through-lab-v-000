@@ -22,7 +22,7 @@ describe "Artist" do
   end
 
   describe "#songs" do
-    it "has many songs" do
+    it "returns all songs associated with this Artist" do
       jay_z = Artist.new("Jay-Z")
       rap = Genre.new("rap")
 
