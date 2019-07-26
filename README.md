@@ -2,10 +2,10 @@
 
 ## Objectives
 
-1.  Write classes that are related to each other via the "has-many-through"
-    relationship.
-2.  Write methods that use the "has-many-through" relationship to deliver
-    information on related objects.
+- Write classes that are related to each other via the "has-many-through"
+  relationship.
+- Write methods that use the "has-many-through" relationship to deliver
+  information on related objects.
 
 ## Overview
 
