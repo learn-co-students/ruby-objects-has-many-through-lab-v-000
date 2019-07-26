@@ -1,4 +1,6 @@
-  attr_accessor :name, :artist, :genre
+class Song
+  attr_reader :artist, :genre
+  attr_accessor :name
 
   @@all = []
 
@@ -17,4 +19,3 @@
     puts 'hi'
   end
 end
->>>>>>> rebase from master, updated solution
