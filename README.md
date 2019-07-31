@@ -40,13 +40,9 @@ Start with the `Artist`/`Song`/`Genre` domain.
 - The `Artist` class needs an instance method, `#genres` that iterates over that
   artist's songs and collects the genre of each song.
 
-**The `Song` model:**
-
-- The `Song` class needs a class variable `@@all` that begins as an empty array.
-- The `Song` class needs a class method `.all` that lists each song in the class
-  variable.
-- A song should be initialized with a name, an artist, and a genre, and be saved
-  in the `@@all` array.
+```ruby
+madonna = Artist.new("Madonna")
+```
 
 **The `Genre` model:**
 
@@ -60,6 +56,25 @@ Start with the `Artist`/`Song`/`Genre` domain.
   genre's collection of songs and collects the artist that owns each song.
 
 Now let's move on to our `Doctor`/`Appointment`/`Patient` domain model.
+
+```ruby
+pop = Genre.new("pop")
+```
+
+**The `Song` model:**
+
+- The `Song` class needs a class variable `@@all` that begins as an empty array.
+- The `Song` class needs a class method `.all` that lists each song in the class
+  variable.
+- A song should be initialized with a name, an artist, and a genre, and be saved
+  in the `@@all` array.
+
+```ruby
+madonna = Artist.new("Madonna")
+pop = Genre.new("pop")
+
+into_the_groove = Song.new("Into the Groove", madonna, pop)
+```
 
 **The `Doctor` model:**
 
@@ -76,13 +91,9 @@ Now let's move on to our `Doctor`/`Appointment`/`Patient` domain model.
   that doctor's `Appointment`s and collects the patient that belongs to each
   `Appointment`s.
 
-**The `Appointment` model:**
-
-- The `Appointment` class needs a class variable `@@all` that begins as an empty array.
-- The `Appointment` class needs a class method `.all` that lists each `Appointment`
-  in the class variable.
-- An `Appointment` should be initialized with a date (as a string, like `"Monday, August 1st"`), a patient, and a doctor. The `Appointment` should be saved in the
-  `@@all` array.
+```ruby
+doogie = Doctor.new("Doogie Howser")
+```
 
 **The `Patient` model:**
 
@@ -99,5 +110,24 @@ Now let's move on to our `Doctor`/`Appointment`/`Patient` domain model.
 - The `Patient` class needs an instance method, `#doctors`, that iterates over
   that patient's `Appointment`s and collects the doctor that belongs to each
   `Appointment`.
+
+```ruby
+ferris = Patient.new("Ferris Bueller")
+```
+
+**The `Appointment` model:**
+
+- The `Appointment` class needs a class variable `@@all` that begins as an empty array.
+- The `Appointment` class needs a class method `.all` that lists each `Appointment`
+  in the class variable.
+- An `Appointment` should be initialized with a date (as a string, like `"Monday, August 1st"`), a patient, and a doctor. The `Appointment` should be saved in the
+  `@@all` array.
+
+```ruby
+ferris = Patient.new("Ferris Bueller")
+doogie = Doctor.new("Doogie Howser")
+
+new_appointment = Appointment.new('January 1st, 1989', ferris, doogie)
+```
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/ruby-objects-has-many-through-lab'>Has Many Objects Through Lab</a> on Learn.co and start learning to code for free.</p>
