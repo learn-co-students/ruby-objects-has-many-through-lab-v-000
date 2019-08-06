@@ -8,7 +8,7 @@ attr_accessor :name
 def initialize(name)
   @name = name
   @@all << self
-  @genre = []
+  @genres = []
 end
 
 
@@ -27,8 +27,10 @@ def songs
 end
 
 def genres
-self.songs.select { |song| song.genre }
-
+ songs.each do |song|
+   @genres << song.genre
+ end
+ @genres
 end
 
 end
