@@ -1,6 +1,6 @@
 class Doctor
 
-attr_accessor :name, :patient, :appointment
+attr_accessor :name
 
 @@all = []
 
@@ -19,7 +19,7 @@ def appointments
   end
 end
 
-def new_appointment(date, patient)
+def new_appointment(patient, date)
  Appointment.new(date, patient, self)
 end
 
