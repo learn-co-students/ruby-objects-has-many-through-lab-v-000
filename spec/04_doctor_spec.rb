@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 describe 'Doctor' do
   describe '#name' do
     it 'has a name' do
