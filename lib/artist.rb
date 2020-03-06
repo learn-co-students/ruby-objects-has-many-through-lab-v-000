@@ -1,6 +1,6 @@
 # artist.#!/usr/bin/env ruby -wKU
 class Artist
-  attr_accessor :name, :genre
+  attr_accessor :name
   @@all = []
 
   def initialize(name)
@@ -17,9 +17,7 @@ class Artist
   end
 
   def songs
-    Song.all.select do |song|
-      song.artist == self
-    end
+    Song.all.select {|song| song.artist == self}
   end
 
   def genres
