@@ -11,15 +11,16 @@ class Artist
     @@all
   end
 
-  def new_song(name , genre)
+  def new_song(name, genre)
     Song.new(name, self, genre)
   end
 
   def songs
-    Song.all.select {|s| s.artist == self}
+    Song.all.select { |song| song.artist == self }
   end
 
   def genres
-    songs.map {|s| s.genre}
+    songs.collect {|song| song.genre}
   end
+
 end
