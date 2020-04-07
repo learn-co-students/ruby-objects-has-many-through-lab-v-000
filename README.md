@@ -82,7 +82,7 @@ Now let's move on to our `Doctor`/`Appointment`/`Patient` domain model.
   class variable.
 - A doctor should be initialized with a name and be saved in the `@@all` array.
 - The `Doctor` class needs an instance method, `#new_appointment`, that takes in a
-  an instance of the `Patient` class and a date, and creates a new `Appointment`. That
+  date and an instance of the `Patient` class, and creates a new `Appointment`. That
   `Appointment` should know that it belongs to the doctor
 - The `Doctor` class needs an instance method, `#appointments`, that iterates
   through all `Appointment`s and finds those belonging to this doctor.
@@ -101,7 +101,7 @@ doogie = Doctor.new("Doogie Howser")
   class variable.
 - A patient is instantiated with a name and be saved in the `@@all` array.
 - The `Patient` class needs an instance method, `#new_appointment`, that takes in
-  an argument of a doctor and a date and creates a new `Appointment`. The
+  a date and an instance of the `Doctor` class and creates a new `Appointment`. The
   `Appointment` should know that it belongs to the patient.
 - The `Patient` class needs an instance method, `#appointments`, that iterates
   through the `Appointment`s array and returns `Appointment`s that belong to the
