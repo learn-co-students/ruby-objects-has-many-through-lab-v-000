@@ -20,8 +20,8 @@ describe 'Doctor' do
       doctor_who = Doctor.new('The Doctor')
       doctor_smith = Doctor.new('Matt Smith')
       hevydevy = Patient.new('Devin Townsend')
-      appointment = Appointment.new('Friday, January 32nd', hevydevy, doctor_who)
-      appointment_2 = Appointment.new('Saturday, January 33rd', hevydevy, doctor_smith)
+      appointment = Appointment.new(hevydevy, doctor_who, 'Friday, January 32nd')
+      appointment_2 = Appointment.new(hevydevy, doctor_smith, 'Saturday, January 33rd')
       
       expect(doctor_who.appointments).to include(appointment)
       expect(doctor_smith.appointments).to include(appointment_2)
@@ -30,10 +30,10 @@ describe 'Doctor' do
   end
 
   describe '#new_appointment' do
-    it 'given a date and a patient, creates a new appointment' do
+    it 'given a patient and a date (in this order), creates a new appointment' do
       doctor_who = Doctor.new('The Doctor')
       hevydevy = Patient.new('Devin Townsend')
-      appointment = doctor_who.new_appointment('Friday, January 32nd', hevydevy)
+      appointment = doctor_who.new_appointment(hevydevy, 'Friday, January 32nd')
       expect(doctor_who.appointments).to include(appointment)
       expect(appointment.doctor).to eq(doctor_who)
     end
@@ -43,7 +43,7 @@ describe 'Doctor' do
     it 'has many patients, through appointments' do
       doctor_who = Doctor.new('The Doctor')
       hevydevy = Patient.new('Devin Townsend')
-      doctor_who.new_appointment('Friday, January 32nd', hevydevy)
+      doctor_who.new_appointment(hevydevy, 'Friday, January 32nd')
 
       expect(doctor_who.patients).to include(hevydevy)
     end

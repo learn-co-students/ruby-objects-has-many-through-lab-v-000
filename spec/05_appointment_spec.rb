@@ -6,20 +6,20 @@ describe "Appointment" do
     it "knows about all appointments that have been created" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")
-      doctor_who.new_appointment("Friday, January 32nd", hevydevy)
-      appointment = doctor_who.new_appointment("Caturday, January Purrty2nd", hevydevy)
-      doctor_who.new_appointment("Satunday, January 34nd", hevydevy)
+      doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
+      appointment = doctor_who.new_appointment(hevydevy, "Caturday, January Purrty2nd")
+      doctor_who.new_appointment(hevydevy, "Satunday, January 34nd")
 
       expect(Appointment.all).to include(appointment)
     end
   end
 
   describe "#new" do
-    it "initializes with a date, patient, and doctor" do
+    it "initializes with a patient, doctor, and date (in this order)" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")
 
-      expect{Appointment.new("Friday, January 32nd", hevydevy, doctor_who)}.to_not raise_error
+      expect{Appointment.new(hevydevy, doctor_who, "Friday, January 32nd")}.to_not raise_error
     end
   end
 
@@ -27,7 +27,7 @@ describe "Appointment" do
     it "belongs to a patient" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")
-      appointment = hevydevy.new_appointment("Friday, January 32nd", doctor_who)
+      appointment = hevydevy.new_appointment(doctor_who, "Friday, January 32nd")
       expect(appointment.patient).to eq(hevydevy)
     end
   end
@@ -36,7 +36,7 @@ describe "Appointment" do
     it "belongs to a doctor" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")
-      appointment = doctor_who.new_appointment("Friday, January 32nd", hevydevy)
+      appointment = doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
       expect(appointment.doctor).to eq(doctor_who)
     end
   end
