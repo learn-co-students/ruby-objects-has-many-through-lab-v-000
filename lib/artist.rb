@@ -18,14 +18,14 @@ class Artist
       end
   end
 
-#  def new_song(title, genre)
-#    @title = title
-#    @genre = genre
-#    Song.new = title, genre
-#    end
+  def new_song(title, genre)
+    Song.new(title, self, genre) #song.new is creating a new song object with a string title for the name, the artist object(self) that this method is being called on(this is what self is), gnere object
+  end
 
-  def genre
-  #
+  def genres
+    songs.collect do |song|
+      song.genre
+    end
   end
 
 end

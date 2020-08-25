@@ -7,6 +7,11 @@ class Genre
     @@all
   end
 
+def initialize(genre)
+  @genre = genre
+  @@all << self
+end
+
 
   def songs
   #
