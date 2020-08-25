@@ -1,3 +1,4 @@
+
 class Artist
   attr_accessor :name
 
@@ -12,15 +13,20 @@ class Artist
     @@all << self #storing the initialized artist object (self) in the class variable (@@all)
   end
 
-  def new_song(title, genre)
-    Song.new = (title, genre)
-  end
-
   def songs
-    Song.all.select do |song|
+      Song.all.select do |song|
       song.artist == self
       end
   end
 
+#  def new_song(title, genre)
+#    @title = title
+#    @genre = genre
+#    Song.new = title, genre
+#    end
+
+  def genre
+  #
+  end
 
 end
