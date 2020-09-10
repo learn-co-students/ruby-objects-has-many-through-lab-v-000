@@ -7,16 +7,14 @@ class Patient
     @@all
   end
 
-#  def initialize(name)
-#    @name = name
-#  end
+  def initialize(name)
+    @name = name
+    @@all << self
+  end
 
+  def new_appointment(date, Doctor)
 
-# new_appointment(date, Doctor)
-# @date = date
-# @new_appointment = new appointment
-#
-# end
+  end
 
 # def appointments
 # @appointments = apointment

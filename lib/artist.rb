@@ -23,7 +23,7 @@ class Artist
   end
 
   def genres
-    songs.collect do |song|
+    songs.collect do |song|#this is "has many through", artist has many genre through songs
       song.genre
     end
   end
