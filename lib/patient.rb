@@ -12,16 +12,20 @@ class Patient
     @@all << self
   end
 
-  def new_appointment(date, Doctor)
-
+  def new_appointment(date, doctor)
+    Appointment.new(date, self, doctor)
   end
 
-# def appointments
-# @appointments = apointment
-#
-# end
+ def appointments
+   Appointment.all.select do |appointment|
+     appointment.patient == self
+   end
+ end
 
-# def doctors
-#
-# end
+ def doctors
+   appointments.collect do |appointment|#this is "has many through", patient has many doctors through appts.
+      appointment.doctor
+    end
+  end
+
 end

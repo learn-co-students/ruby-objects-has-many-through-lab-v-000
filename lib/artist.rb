@@ -13,7 +13,7 @@ class Artist
   end
 
   def songs
-      Song.all.select do |song|
+      Song.all.select do |song|#select works on an array and gives an array
       song.artist == self
       end
   end

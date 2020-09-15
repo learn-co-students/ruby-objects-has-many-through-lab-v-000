@@ -16,23 +16,16 @@ class Doctor
     Appointment.new(date, patient, self)
   end
 
-  #def appointments
-    #@appointments = appointments
-    #Appointment.all.select do |appointment|
-    #appointment.doctor == self
-    #end
-  #end
+  def appointments
+    Appointment.all.select do |appointment|
+    appointment.doctor == self
+    end
+  end
 
-
-  #def appointments
-  #@appointments = appointments
-  # Apointment.all select do |appt|
-  #appointments.doctor == self
-  #end
-
-  #def patients
-  #@patients = patients
-  #
-  #end
+  def patients
+    appointments.collect do |appointment|#this is "has many through", doctor has many patients through appts
+      appointment.patient
+    end
+  end
 
 end
