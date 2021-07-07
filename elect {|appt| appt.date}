@@ -1,0 +1,48 @@
+=> [[32m#<Appointment:0x00000001fb5120[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001fb5210[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001fb5170[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001fa27a0[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001fa28e0[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001fa2818[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001fa26d8[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mSaturday, January 33rd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001fa28e0[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001fa2818[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001fa25e8[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mRootenskadootenday, January 315th[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001fa28e0[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001fa2818[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001fa05b8[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001fa06a8[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001fa0608[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001f67920[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001f67ab0[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001f67a10[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001f66bd8[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mCaturday, January Purrty2nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001f67ab0[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001f67a10[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001f65af8[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mSatunday, January 34nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001f67ab0[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001f67a10[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001f5f018[0m
+  @date[32m=[0m[32m#<Doctor:0x00000001f5f1a8[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @doctor[32m=[0m[32m#<Patient:0x00000001f5f158[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<Appointment:0x00000001f5d240[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001f5d308[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001f5d2b8[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001f5b378[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001f5b418[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001f5b3c8[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m,
+ [32m#<Appointment:0x00000001f4f960[0m
+  @date[32m=[0m[31m[1;31m"[0m[31mFriday, January 32nd[1;31m"[0m[31m[0m,
+  @doctor[32m=[0m[32m#<Doctor:0x00000001f4fa28[0m @name[32m=[0m[31m[1;31m"[0m[31mThe Doctor[1;31m"[0m[31m[0m[32m>[0m,
+  @patient[32m=[0m[32m#<Patient:0x00000001f4f9b0[0m @name[32m=[0m[31m[1;31m"[0m[31mDevin Townsend[1;31m"[0m[31m[0m[32m>[0m[32m>[0m]
